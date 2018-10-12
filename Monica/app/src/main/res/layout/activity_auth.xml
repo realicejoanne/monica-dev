@@ -1,115 +1,110 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.percent.PercentRelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/gray"
-    android:orientation="vertical"
     tools:context=".Auth">
 
     <ImageView
         android:id="@+id/mainlogo"
         android:layout_width="match_parent"
-        android:layout_height="314dp"
-        app:srcCompat="@drawable/mainlogo" />
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        app:srcCompat="@drawable/mainlogo"
+        app:layout_heightPercent="48%" />
 
     <EditText
         android:id="@+id/email"
-        android:layout_width="330dp"
         android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="25dp"
+        android:layout_centerInParent="true"
         android:background="@drawable/edit_round"
         android:ems="10"
         android:fontFamily="@font/josefinsans_regular"
-        android:freezesText="false"
         android:hint="E-mail:"
         android:inputType="textEmailAddress"
         android:textColorHint="@color/purple"
-        android:textSize="20sp" />
+        android:textSize="20sp"
+        app:layout_widthPercent="80%" />
 
     <EditText
         android:id="@+id/pass"
-        android:layout_width="330dp"
         android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="10dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
         android:background="@drawable/edit_round"
         android:ems="10"
         android:fontFamily="@font/josefinsans_regular"
         android:hint="Password:"
         android:inputType="textPassword"
         android:textColorHint="@color/purple"
-        android:textSize="20sp" />
+        android:textSize="20sp"
+        app:layout_widthPercent="80%"
+        app:layout_marginBottomPercent="39%" />
 
-    <LinearLayout
-        android:layout_width="match_parent"
+    <Button
+        android:id="@+id/signup"
+
         android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="30dp"
-        android:gravity="center_horizontal">
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:background="@drawable/button_pink"
+        android:fontFamily="@font/josefinsans_regular"
+        android:text="SIGN UP"
+        android:textAlignment="center"
+        android:textColor="@color/purple"
+        android:textSize="18sp"
+        app:layout_widthPercent="30%"
+        app:layout_marginBottomPercent="26%"
+        app:layout_marginStartPercent="16%" />
 
-        <Button
-            android:id="@+id/signup"
-            android:layout_width="129dp"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="5dp"
-            android:background="@drawable/button_pink"
-            android:fontFamily="@font/josefinsans_regular"
-            android:text="SIGN UP"
-            android:textAlignment="center"
-            android:textColor="@color/purple"
-            android:textSize="18sp" />
-
-        <Button
-            android:id="@+id/login"
-            android:layout_width="129dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="5dp"
-            android:background="@drawable/button_purple"
-            android:fontFamily="@font/josefinsans_regular"
-            android:text="LOGIN"
-            android:textAlignment="center"
-            android:textColor="@color/white"
-            android:textSize="18sp" />
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
+    <Button
+        android:id="@+id/login"
         android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
-        android:gravity="center_horizontal">
+        android:layout_alignParentEnd="true"
+        android:layout_alignTop="@+id/signup"
+        android:background="@drawable/button_purple"
+        android:fontFamily="@font/josefinsans_regular"
+        android:text="LOGIN"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        app:layout_widthPercent="30%"
+        app:layout_marginBottomPercent="26%"
+        app:layout_marginEndPercent="16%" />
 
-        <View
-            android:id="@+id/line1"
-            android:layout_width="100dp"
-            android:layout_height="2dp"
-            android:layout_gravity="center_vertical"
-            android:background="@color/purple" />
+    <View
+        android:id="@+id/line1"
+        android:layout_alignParentEnd="true"
+        android:layout_alignTop="@+id/line2"
+        android:background="@color/purple"
+        app:layout_widthPercent="25%"
+        app:layout_heightPercent="0.3%"
+        app:layout_marginBottomPercent="19%"
+        app:layout_marginEndPercent="20%" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:fontFamily="@font/josefinsans_regular"
-            android:gravity="center_horizontal"
-            android:paddingLeft="8dp"
-            android:paddingRight="8dp"
-            android:text="OR"
-            android:textAlignment="center"
-            android:textColor="@color/purple"
-            android:textSize="20sp"
-            android:translationY="-8dp" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="@font/josefinsans_regular"
+        android:text="OR"
+        android:textAlignment="center"
+        android:textColor="@color/purple"
+        android:textSize="20sp"
+        app:layout_marginBottomPercent="17%" />
 
-        <View
-            android:id="@+id/line2"
-            android:layout_width="100dp"
-            android:layout_height="2dp"
-            android:layout_gravity="center_vertical"
-            android:background="@color/purple" />
+    <View
+        android:id="@+id/line2"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:background="@color/purple"
+        app:layout_widthPercent="25%"
+        app:layout_heightPercent="0.3%"
+        app:layout_marginBottomPercent="19%"
+        app:layout_marginStartPercent="20%" />
 
-    </LinearLayout>
-
-</LinearLayout>
+</android.support.percent.PercentRelativeLayout>
