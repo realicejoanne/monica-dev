@@ -20,7 +20,7 @@ Mira Suryani, S.Pd., M.Kom.
 - [x] Splash
 - [ ] Home
 - [ ] Create Committee
-- [ ] Committee Home
+- [x] Committee Home
 - [ ] Committee Features View (6 features)
 - [ ] Profile View
 - [ ] Settings View
