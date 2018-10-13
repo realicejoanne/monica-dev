@@ -18,7 +18,11 @@
         </activity>
         <activity android:name=".Auth" />
         <activity android:name=".MainActivity" />
+<<<<<<< HEAD
         <activity android:name=".CreateComittees"></activity>
+=======
+        <activity android:name=".SelectedCommitee"></activity>
+>>>>>>> b1d2f86977f4cfc74281ff1268a727aa14543861
     </application>
 
 </manifest>
