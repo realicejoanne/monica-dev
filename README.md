@@ -20,12 +20,12 @@ Mira Suryani, S.Pd., M.Kom.
 - [ ] Home
 - [x] Create Committee
 - [x] Committee Home
+- [ ] Committee Features View (6 features)
 - [ ] Profile
 - [ ] Settings
 
 **v2.x (Oct 14th-19th, 2018)**
 - [ ] Fit all layouts with percents
-- [ ] Committee Features View (6 features)
 - [ ] Item list
 - [ ] To do list
 - [ ] Folder
