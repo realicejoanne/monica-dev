@@ -16,13 +16,24 @@ Mira Suryani, S.Pd., M.Kom.
 
 **v1.x (Oct 8th-13th, 2018)**
 - [x] Login with E-mail
-- [ ] Login with Google
+~- [ ] Login with Google~
 - [x] Splash
 - [ ] Home
-- [ ] Create Committee
+- [x] Create Committee
 - [x] Committee Home
+~- [ ] Committee Features View (6 features)~
+- [ ] Profile
+- [ ] Settings
+
+**v2.x (Oct 14th-19th, 2018)**
+- [ ] Fit all layouts with percents
 - [ ] Committee Features View (6 features)
-- [ ] Profile View
-- [ ] Settings View
+- [ ] Item list
+- [ ] To do list
+- [ ] Folder
+- [ ] Chat
+- [ ] Voice call
+- [ ] Video call
+- [ ] Multichat
 
 **soon...**
