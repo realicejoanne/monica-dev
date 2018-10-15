@@ -18,8 +18,15 @@
         </activity>
         <activity android:name=".Auth" />
         <activity android:name=".MainActivity" />
-        <activity android:name=".CreateComittees"></activity>
-        <activity android:name=".SelectedCommitee"></activity>
+        <activity android:name=".CreateComittees" />
+        <activity android:name=".SelectedCommitee" />
+        <activity android:name=".ChatRoom" />
+        <activity android:name=".LiveChat" />
+        <activity android:name=".LiveCall" />
+        <activity android:name=".Channels" />
+        <activity android:name=".ToDoList_Activity" />
+        <activity android:name=".ItemList_Activity" />
+        <activity android:name=".Files_Activity"></activity>
     </application>
 
 </manifest>

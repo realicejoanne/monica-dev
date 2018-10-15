@@ -10,4 +10,6 @@
     <color name="blue">#70b8ea</color>
     <color name="gray">#c1c8e4</color>
     <color name="white">#ffffff</color>
+
+    <color name="clear">@null</color>
 </resources>
