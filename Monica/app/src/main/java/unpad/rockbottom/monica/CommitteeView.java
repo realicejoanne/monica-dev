@@ -1,24 +1,23 @@
 package unpad.rockbottom.monica;
 
-import android.content.ClipData;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
 
-public class SelectedCommitee extends AppCompatActivity {
+public class CommitteeView extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_selected_commitee);
+        setContentView(R.layout.activity_committee);
     }
 
     // Connect with others
     public void onClickChatRoom(View view){
         try {
-            Intent i = new Intent(SelectedCommitee.this, ChatRoom.class);
+            Intent i = new Intent(CommitteeView.this, Chat.class);
             startActivity(i);
         }
         catch (Exception e){
@@ -29,7 +28,7 @@ public class SelectedCommitee extends AppCompatActivity {
 
     public void onClickLiveCall(View view){
         try {
-            Intent i = new Intent(SelectedCommitee.this, LiveCall.class);
+            Intent i = new Intent(CommitteeView.this, Call.class);
             startActivity(i);
         }
         catch (Exception e){
@@ -40,7 +39,7 @@ public class SelectedCommitee extends AppCompatActivity {
 
     public void onClickChannels(View view){
         try {
-            Intent i = new Intent(SelectedCommitee.this, Channels.class);
+            Intent i = new Intent(CommitteeView.this, Channel.class);
             startActivity(i);
         }
         catch (Exception e){
@@ -52,7 +51,7 @@ public class SelectedCommitee extends AppCompatActivity {
     // Features
     public void onClickToDOList(View view){
         try {
-            Intent i = new Intent(SelectedCommitee.this, ToDoList_Activity.class);
+            Intent i = new Intent(CommitteeView.this, ToDoList.class);
             startActivity(i);
         }
         catch (Exception e){
@@ -63,7 +62,7 @@ public class SelectedCommitee extends AppCompatActivity {
 
     public void onClickItemList(View view){
         try {
-            Intent i = new Intent(SelectedCommitee.this, ItemList_Activity.class);
+            Intent i = new Intent(CommitteeView.this, ItemList.class);
             startActivity(i);
         }
         catch (Exception e){
@@ -74,7 +73,7 @@ public class SelectedCommitee extends AppCompatActivity {
 
     public void onClickFiles(View view){
         try {
-            Intent i = new Intent(SelectedCommitee.this, Files_Activity.class);
+            Intent i = new Intent(CommitteeView.this, FileCloud.class);
             startActivity(i);
         }
         catch (Exception e){

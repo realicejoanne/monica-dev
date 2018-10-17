@@ -6,9 +6,9 @@
     android:layout_height="match_parent"
     android:background="@color/gray"
     android:id="@+id/create_comittees_layout"
-    tools:context=".CreateComittees">
+    tools:context=".CreateCommittee">
     <include
-        layout="@layout/create_comittees_appbar"
+        layout="@layout/toolbar_create_committee"
         android:id="@+id/create_comittees_appbar">
     </include>
     <ScrollView

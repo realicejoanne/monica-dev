@@ -3,11 +3,11 @@ package unpad.rockbottom.monica;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-public class ChatRoom extends AppCompatActivity {
+public class Channel extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_chat_room);
+        setContentView(R.layout.activity_channel);
     }
 }
