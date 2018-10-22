@@ -27,9 +27,10 @@ public class ToDoList_Activity extends AppCompatActivity {
     private ListView toDoListView;
 
     DatabaseReference databaseToDoList;
-    private List<List_Class> taskList;
+    private List<List_Class> taskList, taskListGrouped;
     private List<String> daftarDivisi = new ArrayList<>();
     private boolean isNewDivision = false;
+    private int indexHelper;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,6 +40,7 @@ public class ToDoList_Activity extends AppCompatActivity {
         databaseToDoList = FirebaseDatabase.getInstance().getReference("toDoList");
         toDoListView = (ListView) findViewById(R.id.toDoList);
         taskList = new ArrayList<>();
+        taskListGrouped = new ArrayList<>();
 
         addTask = findViewById(R.id.addTask);
         addTaskButton = findViewById(R.id.addTaskButton);
@@ -49,19 +51,18 @@ public class ToDoList_Activity extends AppCompatActivity {
         super.onStart();
 
         //Ambil data dari Firebase Database
-
         databaseToDoList.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
 
                 //Kalo update, clear dulu biar ga numpuk
                 taskList.clear();
-                int i = 0;
                 boolean isNewDivision = false;
 
                 // Kirim data perchild ke kelas responden
                 for(DataSnapshot respondenSnapshot : dataSnapshot.getChildren()){
                     List_Class list_class = respondenSnapshot.getValue(List_Class.class);
+                    // Tiap ada divisi baru, dicatet
                     if (daftarDivisi.isEmpty())
                         daftarDivisi.add(list_class.getDivisi());
                     else {
@@ -78,23 +79,35 @@ public class ToDoList_Activity extends AppCompatActivity {
                             daftarDivisi.add(list_class.getDivisi());
                     }
                     taskList.add(list_class);
-                    i++;
                 }
 
                 // Sorting tiap list dari divisinya ALPHABETICALLY
-                for (int k=0; k<daftarDivisi.size(); k++){
-                    Toast.makeText(getApplicationContext(), daftarDivisi.get(k), Toast.LENGTH_SHORT).show();
-                }
-                Collections.sort(, new Comparator<String>() {
+                Collections.sort(taskList, new Comparator<List_Class>() {
                     @Override
-                    public int compare(String s1, String s2) {
-                        return s1.compareToIgnoreCase(s2);
+                    public int compare(List_Class x, List_Class y) {
+                        return x.getDivisi().compareToIgnoreCase(y.getDivisi());
                     }
                 });
 
+                // Add header to the TaskList
+                indexHelper = 0;
+                for (int j = 0; j < daftarDivisi.size(); j++){
+                    for (int k = indexHelper; k < taskList.size(); k++){
+                        if (k == indexHelper)
+                            taskListGrouped.add(addHeaderTaskList(daftarDivisi.get(j)));
+                        if (daftarDivisi.get(j).equals(taskList.get(k).getDivisi())){
+                            taskListGrouped.add(taskList.get(k));
+                        }
+                        else{
+                            indexHelper = k;
+                            break;
+                        }
+                    }
+                    Toast.makeText(getApplicationContext(), daftarDivisi.get(j), Toast.LENGTH_SHORT).show();
+                }
 
-                //Masukin ke listViewnya
-                List_Adapter adapter = new List_Adapter(ToDoList_Activity.this, taskList);
+                // Finalizing
+                List_Adapter adapter = new List_Adapter(ToDoList_Activity.this, taskListGrouped);
                 toDoListView.setAdapter(adapter);
             }
 
@@ -108,7 +121,7 @@ public class ToDoList_Activity extends AppCompatActivity {
 
     public void addNewTask(View v){
         String id = databaseToDoList.push().getKey();
-        String divisi = "Acara";
+        String divisi = "Humas";
         String taskEntered = addTask.getText().toString();
         boolean isChecked = false;
 
@@ -122,8 +135,15 @@ public class ToDoList_Activity extends AppCompatActivity {
             e.printStackTrace();
             Toast.makeText(this, e.getMessage(), Toast.LENGTH_SHORT).show();
         }
-
         addTask.setText("");
+    }
+
+    public List_Class addHeaderTaskList(String divisi){
+        List_Class temp = new List_Class();
+        temp.setId("0XX0");
+        temp.setDivisi(divisi);
+
+        return temp;
     }
 
 }

@@ -40,11 +40,13 @@ public class List_Adapter extends ArrayAdapter<List_Class> {
         boolean isNewDivision = false;
 
         pesan = taskList.get(position);
+        final String id = taskList.get(position).getId();
         listViewItem = inflater.inflate(R.layout.list_layout, null, true);
+
         TextView divisi = (TextView) listViewItem.findViewById(R.id.divisi);
         CheckBox isiPesan = (CheckBox) listViewItem.findViewById(R.id.pesan);
         ImageButton delete = (ImageButton) listViewItem.findViewById(R.id.delete);
-        final String id = taskList.get(position).getId();
+        LinearLayout linearLayout = (LinearLayout) listViewItem.findViewById(R.id.linearLayoutID);
 
         delete.setVisibility(View.VISIBLE);
         delete.setOnClickListener(new View.OnClickListener() {
@@ -54,35 +56,23 @@ public class List_Adapter extends ArrayAdapter<List_Class> {
             }
         });
 
-        /*if (daftarDivisi.size() == 0){
-            daftarDivisi.add(pesan.getDivisi());
-            isNewDivision = true;
-        }
-        for (int i = 0; i < daftarDivisi.size(); i++){
-            if (daftarDivisi.get(i) != pesan.getDivisi()){
-                daftarDivisi.add(pesan.getDivisi());
-                isNewDivision = true;
-            }
-        }*/
-
-        if (isNewDivision == true){
+        if (pesan.getId().equals("0XX0")){
             ViewGroup.LayoutParams params = divisi.getLayoutParams();
             params.height = ViewGroup.LayoutParams.WRAP_CONTENT;
             params.width = ViewGroup.LayoutParams.WRAP_CONTENT;
             divisi.setLayoutParams(params);
             divisi.setText(pesan.getDivisi());
+            linearLayout.removeAllViews();
         }
         else{
             divisi.setHeight(0);
             divisi.setWidth(0);
+            isiPesan.setChecked(pesan.getIsChecked());
+            if (pesan.getIsChecked() == false)
+                isiPesan.setText(pesan.getIsiPesan());
+            else
+                isiPesan.setPaintFlags(isiPesan.getPaintFlags() | Paint.STRIKE_THRU_TEXT_FLAG);
         }
-
-        isiPesan.setChecked(pesan.getIsChecked());
-        if (pesan.getIsChecked() == false)
-            isiPesan.setText(pesan.getIsiPesan());
-        else
-            isiPesan.setPaintFlags(isiPesan.getPaintFlags() | Paint.STRIKE_THRU_TEXT_FLAG);
-
 
         return listViewItem;
     }

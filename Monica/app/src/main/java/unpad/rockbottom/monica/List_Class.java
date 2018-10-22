@@ -3,8 +3,8 @@ package unpad.rockbottom.monica;
 public class List_Class {
 
     String id,
-            divisi,
-            isiPesan;
+            divisi = "",
+            isiPesan = "";
     boolean isChecked = false;
 
     public List_Class() {
@@ -15,6 +15,14 @@ public class List_Class {
         this.divisi = division;
         this.isiPesan = message;
         this.isChecked = isChecked;
+    }
+
+    public void setDivisi(String divisi) {
+        this.divisi = divisi;
+    }
+
+    public void setId(String id) {
+        this.id = id;
     }
 
     public String getId() {

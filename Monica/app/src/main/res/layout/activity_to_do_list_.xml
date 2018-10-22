@@ -50,7 +50,6 @@
         android:id="@+id/addNewTask"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingBottom="15dp"
         android:orientation="vertical">
 
         <LinearLayout
@@ -86,7 +85,7 @@
             android:id="@+id/toDoList"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:paddingTop="10dp"/>
+            android:paddingBottom="10dp"/>
 
     </LinearLayout>
 

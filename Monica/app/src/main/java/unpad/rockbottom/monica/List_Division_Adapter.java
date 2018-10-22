@@ -11,15 +11,15 @@ import android.widget.TextView;
 import java.util.ArrayList;
 import java.util.List;
 
-public class List_Division_Adapter extends ArrayAdapter<List_Class> {
+public class List_Division_Adapter extends ArrayAdapter<String> {
 
     private Activity context;
-    private List<List_Class> taskList;
+    private List<String> divisi;
 
-    public List_Division_Adapter (Activity context, List<List_Class> taskList){
-        super(context, R.layout.list_layout_division, taskList);
+    public List_Division_Adapter (Activity context, List<String> divisi){
+        super(context, R.layout.list_layout_division, divisi);
         this.context = context;
-        this.taskList = taskList;
+        this.divisi = divisi;
     }
 
     @NonNull
@@ -28,15 +28,12 @@ public class List_Division_Adapter extends ArrayAdapter<List_Class> {
         LayoutInflater inflater = context.getLayoutInflater();
         View listViewItem;
 
-        List<String> daftarDivisi = new ArrayList<>();
-        boolean isNewDivision = false;
-
-        List_Class pesan = taskList.get(position);
+        String divisiList = divisi.get(position);
 
         listViewItem = inflater.inflate(R.layout.list_layout_division, null, true);
 
         TextView divisi = (TextView) listViewItem.findViewById(R.id.divisi);
-        divisi.setText(pesan.getDivisi());
+        divisi.setText(divisiList);
 
         return listViewItem;
     }
