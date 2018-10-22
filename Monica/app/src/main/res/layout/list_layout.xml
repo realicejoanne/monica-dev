@@ -5,7 +5,21 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@color/gray">
+    android:background="@color/gray"
+    android:paddingLeft="15dp"
+    android:paddingRight="15dp">
+
+    <TextView
+        android:id="@+id/divisi"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="Divisi"
+        android:textColor="@color/gray"
+        android:fontFamily="@font/josefinsans_bold"
+        android:textSize="20sp"
+        android:padding="7dp"
+        android:layout_marginBottom="5dp"
+        android:background="@drawable/button_purple"/>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -23,6 +37,7 @@
             android:textColor="@color/purple"
             android:textSize="18sp"
             android:text="This will be the isiPesan"
+            android:maxLines="1"
             android:layout_weight="1"
             android:checked="false"/>
 

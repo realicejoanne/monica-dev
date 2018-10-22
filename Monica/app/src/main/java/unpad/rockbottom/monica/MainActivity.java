@@ -12,11 +12,21 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
         Button btn = (Button) findViewById(R.id.create_comittees_homepage);
+        Button selectedBtn = (Button) findViewById(R.id.selected_committee_page);
+
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(MainActivity.this,CreateComittees.class));
+                startActivity(new Intent(MainActivity.this, CreateComittees.class));
+            }
+        });
+
+        selectedBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(MainActivity.this, SelectedCommitee.class));
             }
         });
     }

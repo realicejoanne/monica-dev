@@ -1,14 +1,24 @@
 package unpad.rockbottom.monica;
 
 public class List_Class {
-    String divisi,
+
+    String id,
+            divisi,
             isiPesan;
     boolean isChecked = false;
 
-    public List_Class(String division, String message, boolean isChecked) {
+    public List_Class() {
+    }
+
+    public List_Class(String id, String division, String message, boolean isChecked) {
+        this.id = id;
         this.divisi = division;
         this.isiPesan = message;
         this.isChecked = isChecked;
+    }
+
+    public String getId() {
+        return id;
     }
 
     public String getDivisi() {

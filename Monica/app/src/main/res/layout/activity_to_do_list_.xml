@@ -50,6 +50,7 @@
         android:id="@+id/addNewTask"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:paddingBottom="15dp"
         android:orientation="vertical">
 
         <LinearLayout
@@ -71,7 +72,7 @@
                 android:id="@+id/addTask"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
-                android:textColor="@color/purple"
+                android:textColor="@color/gray"
                 android:fontFamily="@font/josefinsans_bold"
                 android:paddingLeft="15dp"
                 android:paddingRight="15dp"
@@ -84,9 +85,8 @@
         <ListView
             android:id="@+id/toDoList"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-        </ListView>
+            android:layout_height="wrap_content"
+            android:paddingTop="10dp"/>
 
     </LinearLayout>
 
