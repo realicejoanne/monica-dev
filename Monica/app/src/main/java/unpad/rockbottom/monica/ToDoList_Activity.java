@@ -57,6 +57,8 @@ public class ToDoList_Activity extends AppCompatActivity {
 
                 //Kalo update, clear dulu biar ga numpuk
                 taskList.clear();
+                taskListGrouped.clear();
+                daftarDivisi.clear();
                 boolean isNewDivision = false;
 
                 // Kirim data perchild ke kelas responden
@@ -103,7 +105,6 @@ public class ToDoList_Activity extends AppCompatActivity {
                             break;
                         }
                     }
-                    Toast.makeText(getApplicationContext(), daftarDivisi.get(j), Toast.LENGTH_SHORT).show();
                 }
 
                 // Finalizing
@@ -121,7 +122,7 @@ public class ToDoList_Activity extends AppCompatActivity {
 
     public void addNewTask(View v){
         String id = databaseToDoList.push().getKey();
-        String divisi = "Humas";
+        String divisi = "Acara";
         String taskEntered = addTask.getText().toString();
         boolean isChecked = false;
 

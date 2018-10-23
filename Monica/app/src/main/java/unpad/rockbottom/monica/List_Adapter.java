@@ -22,6 +22,7 @@ public class List_Adapter extends ArrayAdapter<List_Class> {
     private Activity context;
     private List<List_Class> taskList;
     List_Class pesan;
+    private String id;
     DatabaseReference databaseToDoList = FirebaseDatabase.getInstance().getReference("toDoList");
 
     public List_Adapter (Activity context, List<List_Class> taskList){
@@ -40,7 +41,7 @@ public class List_Adapter extends ArrayAdapter<List_Class> {
         boolean isNewDivision = false;
 
         pesan = taskList.get(position);
-        final String id = taskList.get(position).getId();
+        id = taskList.get(position).getId();
         listViewItem = inflater.inflate(R.layout.list_layout, null, true);
 
         TextView divisi = (TextView) listViewItem.findViewById(R.id.divisi);
@@ -56,6 +57,7 @@ public class List_Adapter extends ArrayAdapter<List_Class> {
             }
         });
 
+        // if it is a header
         if (pesan.getId().equals("0XX0")){
             ViewGroup.LayoutParams params = divisi.getLayoutParams();
             params.height = ViewGroup.LayoutParams.WRAP_CONTENT;
@@ -63,7 +65,9 @@ public class List_Adapter extends ArrayAdapter<List_Class> {
             divisi.setLayoutParams(params);
             divisi.setText(pesan.getDivisi());
             linearLayout.removeAllViews();
+            //linearLayout.setBackground(null);
         }
+        // if it is a task list
         else{
             divisi.setHeight(0);
             divisi.setWidth(0);
