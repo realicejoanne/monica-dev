@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     android:background="@color/gray"
     android:id="@+id/create_comittees_layout"
     tools:context=".CreateComittees">
@@ -12,12 +13,10 @@
         android:id="@+id/create_comittees_appbar">
     </include>
     <ScrollView
-        android:layout_below="@+id/create_comittees_appbar"
+        android:nestedScrollingEnabled="true"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="match_parent">
         <LinearLayout
-
-            android:id="@+id/veronica"
             android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
@@ -79,39 +78,12 @@
                 android:text="Use division sector"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
-            <RelativeLayout
-                android:paddingTop="10dp"
-                android:paddingLeft="30dp"
-                android:paddingRight="30dp"
-                android:id="@+id/create_division"
+            <ListView
+                android:id="@+id/add_division_list"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
-                <ImageView
-                    android:id="@+id/divison_icon"
-                    android:src="@drawable/grouppic"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp" />
-                <EditText
-                    android:id="@+id/division_name"
-                    android:layout_toRightOf="@id/divison_icon"
-                    app:backgroundTint = "@color/purple"
-                    android:textColorHint="@color/purple"
-                    android:fontFamily="@font/josefinsans_italic"
-                    android:hint="Divisi Acara"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
-                <Button
-                    android:textSize="15dp"
-                    android:textColor="@color/white"
-                    android:text="Invite Memeber"
-                    android:fontFamily="@font/josefinsans_regular"
-                    android:background="@color/purple"
-                    android:layout_toRightOf="@id/divison_icon"
-                    android:layout_below="@+id/division_name"
-                    android:id="@+id/invite_member"
-                    android:layout_width="130dp"
-                    android:layout_height="30dp" />
-            </RelativeLayout>
+
+            </ListView>
             <RelativeLayout
                 android:paddingTop="10dp"
                 android:paddingLeft="30dp"
@@ -119,61 +91,64 @@
                 android:id="@+id/add_division"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
-                <ImageView
-                    android:id="@+id/divison_icon2"
+                <Button
+                    android:id="@+id/add_divison_icon"
                     android:src="@drawable/addchat"
                     android:layout_width="30dp"
                     android:layout_height="30dp" />
                 <EditText
-                    android:id="@+id/division_name2"
-                    android:layout_toRightOf="@id/divison_icon2"
+                    android:maxLength="20"
+                    android:maxLines="1"
+                    android:lines="1"
+                    android:singleLine="true"
+                    android:ems="20"
+                    android:id="@+id/add_division_name"
                     app:backgroundTint = "@color/purple"
                     android:textColorHint="@color/purple"
                     android:fontFamily="@font/josefinsans_italic"
                     android:hint="Add division"
+                    android:layout_toRightOf="@id/add_divison_icon"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" />
             </RelativeLayout>
+            <LinearLayout
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingBottom="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/josefinsans_bold"
+                    android:textColor="@color/purple"
+                    android:text="Share the invite link: "
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <ImageView
+                    android:src="@drawable/link"
+                    android:id="@+id/icon_invite_link"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp" />
+                <TextView
+                    android:paddingLeft="20dp"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/josefinsans_regular"
+                    android:textColor="@color/purple"
+                    android:text="https://moni.ca/f22r7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+            <Button
+                android:layout_marginBottom="20dp"
+                android:layout_gravity="center_horizontal"
+                android:textSize="15dp"
+                android:textColor="@color/purple"
+                android:text="create"
+                android:id="@+id/create_comittees_button"
+                android:fontFamily="@font/josefinsans_bold"
+                android:background="@color/colorPrimary"
+                android:layout_width="130dp"
+                android:layout_height="30dp" />
         </LinearLayout>
     </ScrollView>
-    <LinearLayout
-        android:layout_above="@id/create_comittees_button"
-        android:gravity="center"
-        android:orientation="horizontal"
-        android:paddingBottom="20dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-        <TextView
-            android:layout_gravity="center"
-            android:fontFamily="@font/josefinsans_bold"
-            android:textColor="@color/purple"
-            android:text="Share the invite link: "
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-        <ImageView
-            android:src="@drawable/link"
-            android:id="@+id/icon_invite_link"
-            android:layout_width="30dp"
-            android:layout_height="30dp" />
-        <TextView
-            android:paddingLeft="20dp"
-            android:layout_gravity="center"
-            android:fontFamily="@font/josefinsans_regular"
-            android:textColor="@color/purple"
-            android:text="https://moni.ca/f22r7"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-    </LinearLayout>
-    <Button
-        android:layout_marginBottom="20dp"
-        android:layout_centerHorizontal="true"
-        android:layout_alignParentBottom="true"
-        android:textSize="15dp"
-        android:textColor="@color/purple"
-        android:text="create"
-        android:id="@+id/create_comittees_button"
-        android:fontFamily="@font/josefinsans_bold"
-        android:background="@color/colorPrimary"
-        android:layout_width="130dp"
-        android:layout_height="30dp" />
-</RelativeLayout>
+</LinearLayout>
