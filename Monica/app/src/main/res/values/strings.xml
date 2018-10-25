@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">Monica</string>
+
+    // BottomNav
+    <string name="home">HOME</string>
+    <string name="profile">PROFILE</string>
+    <string name="settings">SETTINGS</string>
+
 </resources>

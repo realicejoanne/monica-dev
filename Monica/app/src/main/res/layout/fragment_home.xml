@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/gray">
+
+    <LinearLayout
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="130px"
+        android:orientation="horizontal"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:background="@color/pink"
+        android:weightSum="5">
+
+        <ImageButton
+            android:layout_width="100px"
+            android:layout_height="match_parent"
+            android:src="@drawable/menu"
+            android:background="@color/clear"
+            android:scaleType="centerInside"
+            android:layout_weight="1"/>
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textColor="@color/purple"
+            android:fontFamily="@font/onedirection"
+            android:paddingBottom="5dp"
+            android:textSize="35sp"
+            android:text="MONICA"
+            android:gravity="center"
+            android:layout_weight="3"/>
+        <ImageButton
+            android:layout_width="100px"
+            android:layout_height="match_parent"
+            android:src="@drawable/notification"
+            android:background="@color/clear"
+            android:scaleType="centerInside"
+            android:layout_weight="1"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/fg_home"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="33dp"
+        android:layout_marginTop="32dp"
+        android:fontFamily="@font/josefinsans"
+        android:text="Ongoing Committees"
+        android:textColor="@color/purple"
+        android:textSize="20sp" />
+
+    <LinearLayout
+        android:id="@+id/cm_cbs"
+        android:layout_below="@id/fg_home"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="25dp"
+        android:paddingLeft="33dp"
+        android:paddingBottom="10dp">
+
+        <ImageButton
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:background="@drawable/homeeclipse" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/clear"
+                android:layout_marginLeft="15dp"
+                android:text="CBS 2018"
+                android:fontFamily="@font/josefinsans_bold"
+                android:textColor="@color/purple"
+                android:textSize="28sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/clear"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="15dp"
+                android:text="Ospek jurusan di TI Unpad 2018"
+                android:textColor="@color/purple"
+                android:textSize="17sp"
+                android:fontFamily="@font/josefinsans" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/cm_create"
+        android:layout_below="@id/cm_cbs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="25dp"
+        android:paddingLeft="33dp"
+        android:paddingBottom="10dp">
+
+        <ImageButton
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:background="@drawable/homecreate" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/clear"
+                android:layout_marginLeft="15dp"
+                android:text="Create new..."
+                android:fontFamily="@font/josefinsans_bold"
+                android:textColor="@color/purple"
+                android:textSize="28sp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/agenda"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/cm_create"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="33dp"
+        android:layout_marginTop="32dp"
+        android:fontFamily="@font/josefinsans"
+        android:text="Agenda"
+        android:textColor="@color/purple"
+        android:textSize="20sp" />
+
+    <CalendarView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/agenda"
+        android:layout_marginLeft="33dp"
+        android:layout_marginRight="33dp"
+        android:theme="@style/Widget.CalendarView.Custom"/>
+
+</RelativeLayout>

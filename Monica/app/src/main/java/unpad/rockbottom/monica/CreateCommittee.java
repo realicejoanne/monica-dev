@@ -18,9 +18,7 @@ import android.widget.ListView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-import java.util.ArrayList;
-
-public class CreateComittees extends AppCompatActivity {
+public class CreateCommittee extends AppCompatActivity {
 //    LinearLayout veronica;
 //    int heightImage = 50;
 //    int widthImage = 50;
