@@ -9,8 +9,9 @@
     tools:context=".FileCloud">
 
     <LinearLayout
+        android:id="@+id/toolbar"
         android:layout_width="match_parent"
-        android:layout_height="100px"
+        android:layout_height="130px"
         android:orientation="horizontal"
         android:paddingLeft="10dp"
         android:paddingRight="10dp"
@@ -25,14 +26,14 @@
             android:scaleType="centerInside"
             android:layout_weight="1"/>
         <TextView
-            android:id="@+id/committee"
+            android:id="@+id/title"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:textColor="@color/purple"
             android:fontFamily="@font/onedirection"
             android:paddingBottom="5dp"
             android:textSize="35sp"
-            android:text="Files"
+            android:text="FILES"
             android:gravity="center"
             android:layout_weight="3"/>
         <ImageButton
