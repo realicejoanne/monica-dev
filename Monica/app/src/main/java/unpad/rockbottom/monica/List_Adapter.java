@@ -25,11 +25,10 @@ import java.util.List;
 public class List_Adapter extends ArrayAdapter<List_Class> {
     private Activity context;
     private List<List_Class> taskList;
-    AppCompatCheckBox isiPesan;
+    CheckBox isiPesan;
     List_Class pesan;
 
     TextView divisi;
-    DatabaseReference databaseToDoList = FirebaseDatabase.getInstance().getReference("toDoList");
 
     public List_Adapter (Activity context, List<List_Class> taskList){
         super(context, R.layout.list_layout, taskList);
@@ -52,7 +51,7 @@ public class List_Adapter extends ArrayAdapter<List_Class> {
         divisi = (TextView) listViewItem.findViewById(R.id.divisi);
         ImageButton delete = (ImageButton) listViewItem.findViewById(R.id.delete);
         LinearLayout linearLayout = (LinearLayout) listViewItem.findViewById(R.id.linearLayoutID);
-        isiPesan = (AppCompatCheckBox) listViewItem.findViewById(R.id.pesan);
+        isiPesan = (CheckBox) listViewItem.findViewById(R.id.pesan);
         isiPesan.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener()
         {
             @Override

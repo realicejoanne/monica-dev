@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     android:background="@color/gray"
     tools:context=".ItemList_Activity">
 
@@ -43,4 +44,48 @@
             android:scaleType="centerInside"
             android:layout_weight="1"/>
     </LinearLayout>
-</RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/addNewTask"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="20dp">
+
+            <ImageButton
+                android:id="@+id/addTaskButton"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/add"
+                android:padding="7dp"
+                android:background="@color/purple"
+                android:scaleType="centerInside"
+                android:onClick="addNewTask"/>
+            <EditText
+                android:id="@+id/addTask"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:textColor="@color/gray"
+                android:fontFamily="@font/josefinsans_bold"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:hint="Add new task..."
+                android:textSize="20sp"
+                android:textColorHint="@color/gray"
+                android:background="@color/purple"/>
+        </LinearLayout>
+
+        <ListView
+            android:id="@+id/toDoList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="10dp" />
+
+    </LinearLayout>
+
+</LinearLayout>
