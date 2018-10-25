@@ -3,6 +3,7 @@ package unpad.rockbottom.monica;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.view.ViewConfiguration;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.ImageButton;
@@ -50,6 +51,7 @@ public class ToDoList_Activity extends AppCompatActivity {
     protected void onStart() {
         super.onStart();
 
+        toDoListView.setFriction(ViewConfiguration.getScrollFriction() *50);
         //Ambil data dari Firebase Database
         databaseToDoList.addValueEventListener(new ValueEventListener() {
             @Override
@@ -58,12 +60,12 @@ public class ToDoList_Activity extends AppCompatActivity {
                 //Kalo update, clear dulu biar ga numpuk
                 taskList.clear();
                 taskListGrouped.clear();
-                daftarDivisi.clear();
                 boolean isNewDivision = false;
 
                 // Kirim data perchild ke kelas responden
                 for(DataSnapshot respondenSnapshot : dataSnapshot.getChildren()){
                     List_Class list_class = respondenSnapshot.getValue(List_Class.class);
+
                     // Tiap ada divisi baru, dicatet
                     if (daftarDivisi.isEmpty())
                         daftarDivisi.add(list_class.getDivisi());
@@ -83,11 +85,12 @@ public class ToDoList_Activity extends AppCompatActivity {
                     taskList.add(list_class);
                 }
 
+                Collections.sort(daftarDivisi);
                 // Sorting tiap list dari divisinya ALPHABETICALLY
                 Collections.sort(taskList, new Comparator<List_Class>() {
                     @Override
                     public int compare(List_Class x, List_Class y) {
-                        return x.getDivisi().compareToIgnoreCase(y.getDivisi());
+                        return x.getDivisi().compareTo(y.getDivisi());
                     }
                 });
 
@@ -122,7 +125,7 @@ public class ToDoList_Activity extends AppCompatActivity {
 
     public void addNewTask(View v){
         String id = databaseToDoList.push().getKey();
-        String divisi = "Acara";
+        String divisi = "Pubdok";
         String taskEntered = addTask.getText().toString();
         boolean isChecked = false;
 
@@ -146,5 +149,4 @@ public class ToDoList_Activity extends AppCompatActivity {
 
         return temp;
     }
-
 }

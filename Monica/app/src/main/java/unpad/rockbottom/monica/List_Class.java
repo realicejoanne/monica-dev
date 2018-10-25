@@ -5,7 +5,7 @@ public class List_Class {
     String id,
             divisi = "",
             isiPesan = "";
-    boolean isChecked = false;
+    boolean isChecked;
 
     public List_Class() {
     }
@@ -23,6 +23,10 @@ public class List_Class {
 
     public void setId(String id) {
         this.id = id;
+    }
+
+    public void setIsChecked(boolean checked) {
+        isChecked = checked;
     }
 
     public String getId() {

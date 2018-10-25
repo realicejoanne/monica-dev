@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:materialdesign="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:orientation="vertical"
     android:background="@color/gray"
     android:paddingLeft="15dp"
@@ -11,14 +12,13 @@
 
     <TextView
         android:id="@+id/divisi"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:text="Divisi"
         android:textColor="@color/gray"
         android:fontFamily="@font/josefinsans_bold"
         android:textSize="20sp"
         android:padding="7dp"
-        android:layout_marginBottom="5dp"
         android:background="@drawable/button_purple"/>
 
     <LinearLayout
@@ -27,7 +27,7 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:background="@drawable/edit_list_outer"
-        android:weightSum="5">
+        android:layout_marginTop="5dp">
 
         <CheckBox
             android:id="@+id/pesan"
@@ -38,9 +38,8 @@
             android:textColor="@color/purple"
             android:textSize="18sp"
             android:text="This will be the isiPesan"
-            android:maxLines="1"
             android:layout_weight="1"
-            android:checked="false"/>
+            android:checked="false" />
 
         <ImageButton
             android:id="@+id/delete"
@@ -50,7 +49,8 @@
             android:background="@color/clear"
             android:scaleType="centerInside"
             android:layout_weight="4"
-            android:visibility="visible"/>
+            android:visibility="invisible"/>
+
     </LinearLayout>
 
 
