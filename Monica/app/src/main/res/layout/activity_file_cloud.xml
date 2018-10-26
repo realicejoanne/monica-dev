@@ -9,6 +9,7 @@
     tools:context=".FileCloud">
 
     <LinearLayout
+        android:id="@+id/appBarFiles"
         android:layout_width="match_parent"
         android:layout_height="100px"
         android:orientation="horizontal"
@@ -43,4 +44,42 @@
             android:scaleType="centerInside"
             android:layout_weight="1"/>
     </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_marginTop="30dp"
+        android:id="@+id/search_file"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/search_background"
+        android:layout_below="@id/appBarFiles"
+        android:layout_width="320dp"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/search"
+            android:layout_width="30dp"
+            android:layout_height="50dp" />
+        <EditText
+            android:layout_gravity="center_vertical"
+            android:hint="Search..."
+            android:textSize="20sp"
+            android:lines="1"
+            android:maxLines="1"
+            android:background="@null"
+            android:singleLine="true"
+            android:fontFamily="@font/josefinsans_bold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+    <GridView
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="30dp"
+        android:numColumns="3"
+        android:verticalSpacing="10dp"
+        android:layout_below="@id/search_file"
+        android:id="@+id/grid_files"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </GridView>
 </RelativeLayout>
