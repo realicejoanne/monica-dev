@@ -23,6 +23,7 @@
         <activity
             android:name=".CreateCommittee"
             android:parentActivityName=".MainActivity" />
+
         <activity android:name=".CommitteeView" />
         <activity
             android:name=".Chat"
@@ -42,6 +43,7 @@
         <activity
             android:name=".FileCloud"
             android:parentActivityName=".CommitteeView" />
+
         <activity
             android:name=".ChatRoom"
             android:parentActivityName=".Chat" />

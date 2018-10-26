@@ -18,8 +18,10 @@ import android.widget.ListView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import java.util.ArrayList;
+
 public class CreateCommittee extends AppCompatActivity {
-//    LinearLayout veronica;
+    //    LinearLayout veronica;
 //    int heightImage = 50;
 //    int widthImage = 50;
     String divisionName;
@@ -27,11 +29,9 @@ public class CreateCommittee extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_create_comittees);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.create_comittees_appbar);
-        setSupportActionBar(toolbar);
-        Button addDivision = (Button) findViewById(R.id.add_divison_icon);
-        final EditText addDivisonName = (EditText) findViewById(R.id.add_division_name);
+        setContentView(R.layout.activity_create_committee);
+        Button addDivision = (Button) findViewById(R.id.add_division_icon);
+        final EditText addDivisionName = (EditText) findViewById(R.id.add_division_name);
         final ArrayList<AddDivision> AddDivisions = new ArrayList<AddDivision>();
         final AddDivisionAdapter adapter = new
                 AddDivisionAdapter(this,AddDivisions);
@@ -40,15 +40,11 @@ public class CreateCommittee extends AppCompatActivity {
         addDivision.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                divisionName = addDivisonName.getText().toString();
+                divisionName = addDivisionName.getText().toString();
                 AddDivisions.add(new AddDivision(divisionName));
                 adapter.notifyDataSetChanged();
             }
         });
-//        Typeface joefinsasItalic = ResourcesCompat.getFont(this, R.font.josefinsans_italic);
-//        veronica = (LinearLayout) findViewById(R.id.veronica);
-//        AddDivisions.add("one");
-
 
     }
 }

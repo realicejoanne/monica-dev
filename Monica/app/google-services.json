@@ -23,6 +23,14 @@
           }
         },
         {
+          "client_id": "781526045404-4qja3fpc951ckescts61r5ireon1j24c.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "unpad.rockbottom.monica",
+            "certificate_hash": "f9d97ead4a7622737ecfb2462f76747435e58c95"
+          }
+        },
+        {
           "client_id": "781526045404-2o6ln3udscdbkum4gpgs99tcapp5999a.apps.googleusercontent.com",
           "client_type": 3
         }

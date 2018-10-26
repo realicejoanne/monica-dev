@@ -25,8 +25,9 @@
             android:background="@color/clear"
             android:scaleType="centerInside"
             android:layout_weight="1"/>
+
         <TextView
-            android:id="@+id/committee"
+            android:id="@+id/title"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:textColor="@color/purple"
@@ -43,6 +44,7 @@
             android:background="@color/clear"
             android:scaleType="centerInside"
             android:layout_weight="1"/>
+
     </LinearLayout>
 
     <ScrollView
@@ -52,80 +54,69 @@
         <LinearLayout
             android:orientation="vertical"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
-
+            android:layout_height="match_parent">
             <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:paddingLeft="35dp"
                 android:paddingTop="35dp"
-                android:paddingBottom="20dp">
-
+                android:paddingLeft="35dp"
+                android:paddingBottom="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
                 <ImageView
-                    android:id="@+id/comittees_icon"
+                    android:id="@+id/committee_icon"
+                    android:src="@drawable/homecreate"
                     android:layout_width="100dp"
-                    android:layout_height="100dp"
-                    android:src="@drawable/committee" />
-
+                    android:layout_height="100dp" />
                 <EditText
-                    android:id="@+id/comittees_name"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
                     android:layout_marginRight="10dp"
-                    android:layout_toRightOf="@id/comittees_icon"
+                    android:layout_toRightOf="@id/committee_icon"
+                    android:maxLength="20"
+                    app:backgroundTint = "@color/purple"
+                    android:textColorHint="@color/purple"
+                    android:id="@+id/committee_name"
                     android:fontFamily="@font/josefinsans_italic"
                     android:hint="Committee name           (0/20)"
-                    android:maxLength="20"
-                    android:textColorHint="@color/purple"
-                    app:backgroundTint="@color/purple" />
-
-                <EditText
-                    android:id="@+id/comittees_description"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@id/comittees_name"
-                    android:layout_marginLeft="10dp"
+                    android:layout_height="wrap_content" />
+                <EditText
                     android:layout_marginRight="10dp"
-                    android:layout_toRightOf="@id/comittees_icon"
+                    android:layout_marginLeft="10dp"
+                    android:layout_below="@id/committee_name"
+                    android:layout_toRightOf="@id/committee_icon"
+                    android:maxLength="50"
+                    app:backgroundTint = "@color/purple"
+                    android:id="@+id/committee_description"
+                    android:textColorHint="@color/purple"
                     android:fontFamily="@font/josefinsans_italic"
                     android:hint="Description                  (0/50)"
-                    android:maxLength="50"
-                    android:textColorHint="@color/purple"
-                    app:backgroundTint="@color/purple" />
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
             </RelativeLayout>
-
             <CheckBox
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
                 android:layout_marginLeft="16dp"
+                android:textColor="@color/purple"
                 android:fontFamily="@font/josefinsans_bold"
                 android:text="Add project supervisor"
-                android:textColor="@color/purple" />
-
-            <CheckBox
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="wrap_content" />
+            <CheckBox
                 android:layout_marginLeft="16dp"
+                android:textColor="@color/purple"
                 android:fontFamily="@font/josefinsans_bold"
                 android:text="Add steering committee"
-                android:textColor="@color/purple" />
-
-            <CheckBox
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="wrap_content" />
+            <CheckBox
                 android:layout_marginLeft="16dp"
+                android:textColor="@color/purple"
                 android:fontFamily="@font/josefinsans_bold"
                 android:text="Use division sector"
-<<<<<<< HEAD:Monica/app/src/main/res/layout/activity_create_comittees.xml
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
             <ListView
                 android:id="@+id/add_division_list"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
-
             </ListView>
             <RelativeLayout
                 android:paddingTop="10dp"
@@ -135,28 +126,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
                 <Button
-                    android:id="@+id/add_divison_icon"
+                    android:id="@+id/add_division_icon"
                     android:src="@drawable/addchat"
-=======
-                android:textColor="@color/purple" />
-
-            <RelativeLayout
-                android:id="@+id/create_division"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:paddingLeft="30dp"
-                android:paddingTop="10dp"
-                android:paddingRight="30dp">
-
-                <ImageView
-                    android:id="@+id/division_icon"
->>>>>>> 136b033916ed4b2da226d9ed03e296250ec44474:Monica/app/src/main/res/layout/activity_create_committee.xml
                     android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:src="@drawable/grouppic" />
-
+                    android:layout_height="30dp" />
                 <EditText
-<<<<<<< HEAD:Monica/app/src/main/res/layout/activity_create_comittees.xml
                     android:maxLength="20"
                     android:maxLines="1"
                     android:lines="1"
@@ -167,7 +141,7 @@
                     android:textColorHint="@color/purple"
                     android:fontFamily="@font/josefinsans_italic"
                     android:hint="Add division"
-                    android:layout_toRightOf="@id/add_divison_icon"
+                    android:layout_toRightOf="@id/add_division_icon"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" />
             </RelativeLayout>
@@ -203,60 +177,12 @@
                 android:layout_gravity="center_horizontal"
                 android:textSize="15dp"
                 android:textColor="@color/purple"
-                android:text="create"
-                android:id="@+id/create_comittees_button"
+                android:text="CREATE"
+                android:id="@+id/create_committee_button"
                 android:fontFamily="@font/josefinsans_bold"
-                android:background="@color/colorPrimary"
+                android:background="@drawable/button_pink"
                 android:layout_width="130dp"
                 android:layout_height="30dp" />
-=======
-                    android:id="@+id/division_name"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_toRightOf="@id/division_icon"
-                    android:fontFamily="@font/josefinsans_italic"
-                    android:hint="Divisi Acara"
-                    android:textColorHint="@color/purple"
-                    app:backgroundTint="@color/purple" />
-
-                <Button
-                    android:id="@+id/invite_member"
-                    android:layout_width="130dp"
-                    android:layout_height="30dp"
-                    android:layout_below="@+id/division_name"
-                    android:layout_toRightOf="@id/division_icon"
-                    android:background="@color/purple"
-                    android:fontFamily="@font/josefinsans_regular"
-                    android:text="Invite Member"
-                    android:textColor="@color/white"
-                    android:textSize="15dp" />
-            </RelativeLayout>
-
-            <RelativeLayout
-                android:id="@+id/add_division"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:paddingLeft="30dp"
-                android:paddingTop="10dp"
-                android:paddingRight="30dp">
-
-                <ImageView
-                    android:id="@+id/division_icon2"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:src="@drawable/addchat" />
-
-                <EditText
-                    android:id="@+id/division_name2"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_toRightOf="@id/division_icon2"
-                    android:fontFamily="@font/josefinsans_italic"
-                    android:hint="Add division"
-                    android:textColorHint="@color/purple"
-                    app:backgroundTint="@color/purple" />
-            </RelativeLayout>
->>>>>>> 136b033916ed4b2da226d9ed03e296250ec44474:Monica/app/src/main/res/layout/activity_create_committee.xml
         </LinearLayout>
     </ScrollView>
 </LinearLayout>
