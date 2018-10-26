@@ -9,8 +9,9 @@
     tools:context=".Chat">
 
     <LinearLayout
+        android:id="@+id/toolbar"
         android:layout_width="match_parent"
-        android:layout_height="100px"
+        android:layout_height="130px"
         android:orientation="horizontal"
         android:paddingLeft="10dp"
         android:paddingRight="10dp"
@@ -23,9 +24,9 @@
             android:src="@drawable/back"
             android:background="@color/clear"
             android:scaleType="centerInside"
-            android:layout_weight="1" />
+            android:layout_weight="1"/>
         <TextView
-            android:id="@+id/committee"
+            android:id="@+id/title"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:textColor="@color/purple"

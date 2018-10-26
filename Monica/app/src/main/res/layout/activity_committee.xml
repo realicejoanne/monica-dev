@@ -7,14 +7,51 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@color/gray"
-    android:paddingLeft="20dp"
-    android:paddingRight="20dp"
     tools:context=".CommitteeView">
+
+    <LinearLayout
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="130px"
+        android:orientation="horizontal"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:background="@color/pink"
+        android:weightSum="5">
+
+        <ImageButton
+            android:layout_width="100px"
+            android:layout_height="match_parent"
+            android:src="@drawable/menu"
+            android:background="@color/clear"
+            android:scaleType="centerInside"
+            android:layout_weight="1"/>
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textColor="@color/purple"
+            android:fontFamily="@font/onedirection"
+            android:paddingBottom="5dp"
+            android:textSize="35sp"
+            android:text="MONICA"
+            android:gravity="center"
+            android:layout_weight="3"/>
+        <ImageButton
+            android:layout_width="100px"
+            android:layout_height="match_parent"
+            android:src="@drawable/notification"
+            android:background="@color/clear"
+            android:scaleType="centerInside"
+            android:layout_weight="1"/>
+    </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
         android:layout_marginTop="40dp">
         <ImageView
             android:id="@+id/imageCommittee"
@@ -100,6 +137,8 @@
         android:textColor="@color/purple"
         android:fontFamily="@font/josefinsans_bold"
         android:layout_marginTop="35dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
         android:textSize="20sp"
         android:text="Connect with others"/>
 
@@ -107,6 +146,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
         android:weightSum="3">
         <LinearLayout
             android:layout_width="wrap_content"
@@ -168,6 +209,8 @@
         android:textColor="@color/purple"
         android:fontFamily="@font/josefinsans_bold"
         android:layout_marginTop="35dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
         android:textSize="20sp"
         android:text="Features"/>
 
@@ -175,6 +218,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
         android:weightSum="3">
         <LinearLayout
             android:layout_width="wrap_content"

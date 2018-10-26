@@ -2,10 +2,8 @@
     <string name="app_name">Monica</string>
 
     // BottomNav
-    <string name="home">Home</string>
-    <string name="profile">Profile</string>
-    <string name="settings">Settings</string>
+    <string name="home">HOME</string>
+    <string name="profile">PROFILE</string>
+    <string name="settings">SETTINGS</string>
 
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
