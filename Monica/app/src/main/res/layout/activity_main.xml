@@ -28,5 +28,11 @@
         android:text="create committee"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
+    <Button
+        android:layout_below="@id/create_comittees_homepage"
+        android:id="@+id/create_file_cloud"
+        android:text="File Cloud"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
 
 </RelativeLayout>
