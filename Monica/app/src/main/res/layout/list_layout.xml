@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:materialdesign="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/gray"
+    android:paddingLeft="15dp"
+    android:paddingRight="15dp">
+
+    <TextView
+        android:id="@+id/divisi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Divisi"
+        android:textColor="@color/gray"
+        android:fontFamily="@font/josefinsans_bold"
+        android:textSize="20sp"
+        android:padding="7dp"
+        android:background="@drawable/button_purple"/>
+
+    <LinearLayout
+        android:id="@+id/linearLayoutID"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@drawable/edit_list_outer"
+        android:layout_marginTop="5dp">
+
+        <CheckBox
+            android:id="@+id/pesan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:buttonTint="@color/purple"
+            android:fontFamily="@font/josefinsans_bold"
+            android:textColor="@color/purple"
+            android:textSize="18sp"
+            android:text="This will be the isiPesan"
+            android:layout_weight="1"
+            android:checked="false" />
+
+        <ImageButton
+            android:id="@+id/delete"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/send"
+            android:background="@color/clear"
+            android:scaleType="centerInside"
+            android:layout_weight="4"
+            android:visibility="invisible"/>
+
+    </LinearLayout>
+
+
+</LinearLayout>

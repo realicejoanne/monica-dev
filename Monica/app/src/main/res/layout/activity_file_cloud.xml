@@ -9,8 +9,9 @@
     tools:context=".FileCloud">
 
     <LinearLayout
+        android:id="@+id/toolbar"
         android:layout_width="match_parent"
-        android:layout_height="100px"
+        android:layout_height="130px"
         android:orientation="horizontal"
         android:paddingLeft="10dp"
         android:paddingRight="10dp"
@@ -25,14 +26,14 @@
             android:scaleType="centerInside"
             android:layout_weight="1"/>
         <TextView
-            android:id="@+id/committee"
+            android:id="@+id/title"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:textColor="@color/purple"
             android:fontFamily="@font/onedirection"
             android:paddingBottom="5dp"
             android:textSize="35sp"
-            android:text="Files"
+            android:text="FILES"
             android:gravity="center"
             android:layout_weight="3"/>
         <ImageButton
@@ -43,4 +44,42 @@
             android:scaleType="centerInside"
             android:layout_weight="1"/>
     </LinearLayout>
+    <LinearLayout
+        android:layout_below="@id/toolbar"
+        android:orientation="horizontal"
+        android:layout_marginTop="30dp"
+        android:id="@+id/search_file"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/search_background"
+        android:layout_width="320dp"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/search"
+            android:layout_width="30dp"
+            android:layout_height="50dp" />
+        <EditText
+            android:layout_gravity="center_vertical"
+            android:hint="Search..."
+            android:textSize="20sp"
+            android:lines="1"
+            android:maxLines="1"
+            android:background="@null"
+            android:singleLine="true"
+            android:fontFamily="@font/josefinsans_bold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+    <GridView
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="30dp"
+        android:numColumns="3"
+        android:verticalSpacing="10dp"
+        android:layout_below="@id/search_file"
+        android:id="@+id/grid_files"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </GridView>
 </RelativeLayout>

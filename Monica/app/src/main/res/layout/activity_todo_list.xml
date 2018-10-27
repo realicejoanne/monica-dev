@@ -9,8 +9,9 @@
     tools:context=".ToDoList">
 
     <LinearLayout
+        android:id="@+id/toolbar"
         android:layout_width="match_parent"
-        android:layout_height="100px"
+        android:layout_height="130px"
         android:orientation="horizontal"
         android:paddingLeft="10dp"
         android:paddingRight="10dp"
@@ -20,14 +21,13 @@
         <ImageButton
             android:layout_width="100px"
             android:layout_height="match_parent"
-            android:padding="20px"
             android:src="@drawable/back"
             android:background="@color/clear"
             android:scaleType="centerInside"
             android:layout_weight="1"/>
         <TextView
-            android:id="@+id/committee"
-            android:layout_width="wrap_content"
+            android:id="@+id/title"
+            android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:textColor="@color/purple"
             android:fontFamily="@font/onedirection"
@@ -39,10 +39,54 @@
         <ImageButton
             android:layout_width="100px"
             android:layout_height="match_parent"
-            android:padding="20px"
             android:src="@drawable/profile"
             android:background="@color/clear"
             android:scaleType="centerInside"
             android:layout_weight="1"/>
     </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/addNewTask"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toolbar"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="20dp">
+
+            <ImageButton
+                android:id="@+id/addTaskButton"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/add"
+                android:padding="7dp"
+                android:background="@color/purple"
+                android:scaleType="centerInside"
+                android:onClick="addNewTask"/>
+            <EditText
+                android:id="@+id/addTask"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:textColor="@color/gray"
+                android:fontFamily="@font/josefinsans_bold"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:hint="Add new task..."
+                android:textSize="20sp"
+                android:textColorHint="@color/gray"
+                android:background="@color/purple"/>
+        </LinearLayout>
+
+        <ListView
+            android:id="@+id/toDoList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="10dp" />
+
+    </LinearLayout>
+
 </RelativeLayout>
