@@ -22,20 +22,29 @@
         <ImageButton
             android:layout_width="100px"
             android:layout_height="match_parent"
-            android:src="@drawable/menu"
+            android:src="@drawable/back"
             android:background="@color/clear"
             android:scaleType="centerInside"
             android:layout_weight="1"/>
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/icon_circle_outerblue_pinkbg"
+            android:background="@drawable/grouppic"
+            android:scaleType="centerCrop"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="10dp"/>
         <TextView
             android:id="@+id/title"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:textColor="@color/purple"
-            android:fontFamily="@font/onedirection"
-            android:paddingBottom="5dp"
-            android:textSize="35sp"
-            android:text="MONICA"
-            android:gravity="center"
+            android:fontFamily="@font/josefinsans_bold"
+            android:textSize="23sp"
+            android:text="Divisi Pubdok"
+            android:paddingTop="5dp"
+            android:paddingStart="10dp"
+            android:gravity="center_vertical"
             android:layout_weight="3"/>
         <ImageButton
             android:layout_width="100px"
@@ -45,5 +54,53 @@
             android:scaleType="centerInside"
             android:layout_weight="1"/>
     </LinearLayout>
+
+    <ListView
+        android:id="@+id/Chats"
+        android:layout_width="match_parent"
+        android:layout_height="336dp" >
+
+    </ListView>
+
+    <RelativeLayout
+        android:id="@+id/messages"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_gravity="bottom"
+        android:gravity="bottom"
+        android:background="@color/pink">
+        <ImageButton
+            android:id="@+id/plusIcon"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/addnew"
+            android:background="@color/clear"
+            android:padding="5dp"
+            android:scaleType="centerInside"/>
+        <EditText
+            android:id="@+id/inputText"
+            android:layout_toEndOf="@+id/plusIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:textColor="@color/purple"
+            android:fontFamily="@font/josefinsans_bold"
+            android:textSize="23sp"
+            android:paddingTop="5dp"
+            android:paddingStart="10dp"
+            android:hint="Input Message"
+            android:gravity="center_vertical" />
+
+        <ImageButton
+            android:id="@+id/send"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:padding="10dp"
+            android:layout_alignParentTop="true"
+            android:layout_toEndOf="@id/inputText"
+            android:background="@color/clear"
+            android:scaleType="centerInside"
+            android:src="@drawable/send" />
+
+    </RelativeLayout>
 
 </LinearLayout>

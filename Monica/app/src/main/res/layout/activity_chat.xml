@@ -54,7 +54,8 @@
         android:paddingLeft="20dp"
         android:paddingRight="20dp"
         android:paddingTop="10dp"
-        android:paddingBottom="10dp">
+        android:paddingBottom="10dp"
+        android:onClick="onClickChatRoom">
 
         <ImageView
             android:layout_width="70dp"
