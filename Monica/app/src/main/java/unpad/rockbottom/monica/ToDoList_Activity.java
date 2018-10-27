@@ -4,6 +4,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.view.ViewConfiguration;
+import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ListView;
@@ -20,7 +21,7 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 
-public class ChannelRoom extends AppCompatActivity {
+public class ToDoList_Activity extends AppCompatActivity {
 
     private EditText addTask;
     private ImageButton addTaskButton;
@@ -35,9 +36,9 @@ public class ChannelRoom extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_channel_room);
+        setContentView(R.layout.activity_to_do_list_);
 
-        databaseToDoList = FirebaseDatabase.getInstance().getReference("itemList");
+        databaseToDoList = FirebaseDatabase.getInstance().getReference("toDoList");
         toDoListView = (ListView) findViewById(R.id.toDoList);
         taskList = new ArrayList<>();
         taskListGrouped = new ArrayList<>();
@@ -110,7 +111,7 @@ public class ChannelRoom extends AppCompatActivity {
                 }
 
                 // Finalizing
-                List_Adapter adapter = new List_Adapter(ItemList_Activity.this, taskListGrouped);
+                List_Adapter adapter = new List_Adapter(ToDoList_Activity.this, taskListGrouped);
                 toDoListView.setAdapter(adapter);
             }
 
@@ -124,7 +125,7 @@ public class ChannelRoom extends AppCompatActivity {
 
     public void addNewTask(View v){
         String id = databaseToDoList.push().getKey();
-        String divisi = "Acara";
+        String divisi = "Pubdok";
         String taskEntered = addTask.getText().toString();
         boolean isChecked = false;
 
