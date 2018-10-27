@@ -58,9 +58,7 @@
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:contentDescription="logoSelected"
-            app:srcCompat="@drawable/eclipse"
-            android:background="@drawable/edit_round"
-            android:padding="7dp"
+            android:src="@drawable/homeeclipse"
             android:scaleType="centerCrop"/>
 
         <LinearLayout

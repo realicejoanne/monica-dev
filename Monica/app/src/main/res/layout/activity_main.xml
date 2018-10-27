@@ -11,7 +11,8 @@
         android:id="@+id/fragment_container"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_above="@+id/bottomnav"></FrameLayout>
+        android:layout_above="@+id/bottomnav">
+    </FrameLayout>
 
     <android.support.design.widget.BottomNavigationView
         android:id="@+id/bottomnav"
@@ -22,22 +23,5 @@
         app:itemIconTint="@color/purple"
         app:itemTextColor="@color/purple"
         app:menu="@menu/bottomnav"/>
-
-    <Button
-        android:id="@+id/create_comittees_homepage"
-        android:text="create committee"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
-    <Button
-        android:layout_below="@id/create_comittees_homepage"
-        android:id="@+id/create_file_cloud"
-        android:text="File Cloud"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
-    <Button
-        android:id="@+id/selected_committee_page"
-        android:text="Selected committee page"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
 
 </RelativeLayout>

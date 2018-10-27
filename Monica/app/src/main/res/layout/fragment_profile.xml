@@ -1,54 +1,161 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/gray"
     android:orientation="vertical">
 
-    <LinearLayout
-        android:id="@+id/toolbar"
-        android:layout_width="match_parent"
-        android:layout_height="130px"
-        android:orientation="horizontal"
-        android:paddingLeft="10dp"
-        android:paddingRight="10dp"
-        android:background="@color/pink"
-        android:weightSum="5">
+    <include layout="@layout/toolbar_main"
+        android:id="@+id/toolbar"/>
 
-        <ImageButton
-            android:layout_width="100px"
-            android:layout_height="match_parent"
-            android:src="@drawable/menu"
-            android:background="@color/clear"
-            android:scaleType="centerInside"
-            android:layout_weight="1"/>
-        <TextView
-            android:id="@+id/title"
+    <LinearLayout
+        android:id="@+id/summary"
+        android:layout_below="@id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:layout_marginTop="40dp">
+        <ImageView
+            android:id="@+id/imageCommittee"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/profpic"
+            android:scaleType="centerCrop"/>
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:textColor="@color/purple"
-            android:fontFamily="@font/onedirection"
-            android:paddingBottom="5dp"
-            android:textSize="35sp"
-            android:text="PROFILE"
-            android:gravity="center"
-            android:layout_weight="3"/>
-        <ImageButton
-            android:layout_width="100px"
-            android:layout_height="match_parent"
-            android:src="@drawable/notification"
-            android:background="@color/clear"
-            android:scaleType="centerInside"
-            android:layout_weight="1"/>
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="15dp"
+            android:paddingRight="10dp"
+            android:weightSum="4">
+            <TextView
+                android:id="@+id/committee"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/purple"
+                android:fontFamily="@font/josefinsans_bold"
+                android:paddingBottom="5dp"
+                android:textSize="35sp"
+                android:text="Patricia Joanne"
+                android:layout_weight="2"/>
+            <TextView
+                android:id="@+id/detailCommittee"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/purple"
+                android:fontFamily="@font/josefinsans_bold"
+                android:paddingBottom="5dp"
+                android:maxLines="1"
+                android:textSize="14sp"
+                android:text="@patriciajoanne"
+                android:layout_weight="1"
+                tools:ignore="HardcodedText" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_weight="1">
+                <ImageView
+                    android:id="@+id/iconOrang"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:paddingRight="5dp"
+                    android:src="@drawable/committeeicon"
+                    android:layout_gravity="center_vertical"/>
+                <TextView
+                    android:id="@+id/jumlahPanitia"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/purple"
+                    android:fontFamily="@font/josefinsans_bold"
+                    android:layout_gravity="center_vertical"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="30dp"
+                    android:textSize="25sp"
+                    android:text="3"/>
+                <TextView
+                    android:id="@+id/selesai"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/purple"
+                    android:fontFamily="@font/josefinsans_bold"
+                    android:layout_gravity="center_vertical"
+                    android:background="@drawable/button_pink"
+                    android:padding="10dp"
+                    android:maxLines="1"
+                    android:textSize="12sp"
+                    android:text="EDIT PROFILE" />
+            </LinearLayout>
+        </LinearLayout>
     </LinearLayout>
 
     <TextView
-        android:id="@+id/fg_profile"
-        android:layout_width="wrap_content"
+        android:layout_below="@id/summary"
+        android:id="@+id/history"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:text="@string/profile"
         android:textColor="@color/purple"
-        android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+        android:fontFamily="@font/josefinsans"
+        android:layout_marginTop="35dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingBottom="20dp"
+        android:textSize="20sp"
+        android:text="Committees History"/>
 
-</RelativeLayout>
+    <LinearLayout
+        android:layout_below="@+id/history"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:weightSum="3">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_weight="1"
+            android:gravity="center_horizontal">
+
+            <ImageView
+                android:id="@+id/committee1"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginRight="10dp"
+                android:src="@drawable/committee"
+                android:background="@drawable/edit_round"
+                android:padding="20dp"
+                android:scaleType="centerInside"/>
+
+            <ImageView
+                android:id="@+id/committee2"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:src="@drawable/committee"
+                android:background="@drawable/edit_round"
+                android:padding="20dp"
+                android:scaleType="centerInside"/>
+
+            <ImageView
+                android:id="@+id/committee3"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginLeft="10dp"
+                android:src="@drawable/committee"
+                android:background="@drawable/edit_round"
+                android:padding="20dp"
+                android:scaleType="centerInside"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
