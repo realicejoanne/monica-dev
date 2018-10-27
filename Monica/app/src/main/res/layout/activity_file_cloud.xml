@@ -45,12 +45,12 @@
             android:layout_weight="1"/>
     </LinearLayout>
     <LinearLayout
+        android:layout_below="@id/toolbar"
         android:orientation="horizontal"
         android:layout_marginTop="30dp"
         android:id="@+id/search_file"
         android:layout_centerHorizontal="true"
         android:background="@drawable/search_background"
-        android:layout_below="@id/appBarFiles"
         android:layout_width="320dp"
         android:layout_height="wrap_content">
         <ImageView
