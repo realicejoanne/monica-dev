@@ -47,11 +47,12 @@
             android:parentActivityName=".Chat" />
         <activity
             android:name=".ChannelRoom"
+            android:windowSoftInputMode="adjustResize"
             android:parentActivityName=".Channel" />
         <activity
             android:name=".CallRoom"
             android:parentActivityName=".Call" />
-        <activity android:name=".CallVideoRoom"></activity>
+        <activity android:name=".CallVideoRoom"/>
     </application>
 
 </manifest>
