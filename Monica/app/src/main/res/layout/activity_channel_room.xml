@@ -42,7 +42,7 @@
             android:textColor="@color/purple"
             android:fontFamily="@font/josefinsans_bold"
             android:textSize="23sp"
-            android:text="Supposed to be CHannel"
+            android:text="Koor Hari Pertama"
             android:paddingTop="5dp"
             android:paddingStart="10dp"
             android:gravity="center_vertical"
@@ -63,149 +63,233 @@
         android:layout_weight="1">
     </ListView>
 
-    <LinearLayout
-        android:id="@+id/bubbleOrangLain"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:paddingStart="5dp"
-        android:layout_marginBottom="5dp">
+        android:layout_height="wrap_content">
 
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="30dp"
-            android:adjustViewBounds="true"
-            android:layout_marginTop="20dp"
-            android:layout_marginBottom="20dp"
-            android:layout_marginEnd="5dp"
-            android:src="@drawable/profile"/>
         <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:orientation="vertical"
-            android:gravity="center_vertical">
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
-            <TextView
-                android:id="@+id/orang"
+            <LinearLayout
+                android:id="@+id/bubbleOrangLain1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/josefinsans_bold"
-                android:gravity="left"
-                android:paddingStart="10dp"
-                android:text="Kentang"
-                android:textColor="@color/purple"
-                android:textSize="15sp" />
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:weightSum="1">
+                android:paddingStart="5dp"
+                android:layout_marginBottom="5dp">
 
-                <TextView
-                    android:id="@+id/message"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:textColor="@color/blue"
-                    android:fontFamily="@font/josefinsans_regular"
-                    android:textSize="15sp"
-                    android:background="@drawable/button_purple"
-                    android:text="Banner apa kabar? Deadlinenya besok nih @Patricia"
-                    android:padding="10dp"
-                    android:gravity="center_vertical"
-                    android:layout_weight="1"/>
-                <TextView
-                    android:id="@+id/time"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/josefinsans_bold"
-                    android:layout_gravity="bottom"
-                    android:gravity="left"
-
-                    android:text="22.01"
-                    android:textColor="@color/purple"
-                    android:textSize="13sp" />
-                <TextView
-                    android:id="@+id/invisible"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="DUMMY"
-                    android:textSize="15sp"
-                    android:visibility="invisible"/>
-            </LinearLayout>
-        </LinearLayout>
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/bubbleSemdiri"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:paddingStart="20dp"
-        android:layout_marginBottom="5dp">
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="30dp"
-            android:adjustViewBounds="true"
-            android:layout_marginTop="20dp"
-            android:layout_marginBottom="20dp"
-            android:src="@drawable/profile"
-            android:visibility="invisible"/>
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:orientation="vertical"
-            android:gravity="center_vertical">
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:paddingEnd="20dp"
-                android:weightSum="1">
-
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:adjustViewBounds="true"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginEnd="5dp"
+                    android:src="@drawable/profile"/>
                 <LinearLayout
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:orientation="vertical"
-                    android:layout_gravity="bottom|end"
-                    android:layout_marginEnd="3dp">
+                    android:gravity="center_vertical">
 
-                    <ImageView
-                        android:layout_width="15dp"
-                        android:layout_height="wrap_content"
-                        android:adjustViewBounds="true"
-                        android:layout_gravity="end"
-                        android:src="@drawable/read"
-                        android:layout_marginBottom="2dp"/>
                     <TextView
-                        android:id="@+id/read"
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
+                        android:id="@+id/orang1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
                         android:fontFamily="@font/josefinsans_bold"
-                        android:layout_gravity="bottom"
-                        android:gravity="end"
-                        android:text="22.01"
+                        android:gravity="left"
+                        android:paddingStart="10dp"
+                        android:text="Pokki"
                         android:textColor="@color/purple"
-                        android:textSize="13sp" />
+                        android:textSize="15sp" />
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="1">
+
+                        <TextView
+                            android:id="@+id/message1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/blue"
+                            android:fontFamily="@font/josefinsans_regular"
+                            android:textSize="15sp"
+                            android:background="@drawable/button_purple"
+                            android:text="Kalo MC udh dtg kasih tau yaa. Kita lagi bantuin logiskeep dulu"
+                            android:padding="10dp"
+                            android:gravity="center_vertical"
+                            android:layout_weight="1"/>
+                        <TextView
+                            android:id="@+id/time1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/josefinsans_bold"
+                            android:layout_gravity="bottom"
+                            android:gravity="left"
+                            android:text="06.32"
+                            android:textColor="@color/purple"
+                            android:textSize="13sp" />
+                        <TextView
+                            android:id="@+id/invisible1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="DUMMY"
+                            android:textSize="15sp"
+                            android:visibility="invisible"/>
+                    </LinearLayout>
                 </LinearLayout>
-                <TextView
-                    android:id="@+id/messageSelf"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:textColor="@color/purple"
-                    android:fontFamily="@font/josefinsans_regular"
-                    android:textSize="15sp"
-                    android:background="@drawable/button_blue"
-                    android:text="Banner udah jadi ya tinggal diprint, tolong blngin logistik @Kentang"
-                    android:padding="10dp"
-                    android:gravity="center_vertical|end"
-                    android:layout_weight="1"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/bubbleOrangLain2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingStart="5dp"
+                android:layout_marginBottom="5dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:adjustViewBounds="true"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginEnd="5dp"
+                    android:src="@drawable/profile"/>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:id="@+id/orang2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/josefinsans_bold"
+                        android:gravity="left"
+                        android:paddingStart="10dp"
+                        android:text="Miws"
+                        android:textColor="@color/purple"
+                        android:textSize="15sp" />
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="1">
+
+                        <TextView
+                            android:id="@+id/message2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/blue"
+                            android:fontFamily="@font/josefinsans_regular"
+                            android:textSize="15sp"
+                            android:background="@drawable/button_purple"
+                            android:text="Jangan lupa koordinasi sama fakultas lain"
+                            android:padding="10dp"
+                            android:gravity="center_vertical"
+                            android:layout_weight="1"/>
+                        <TextView
+                            android:id="@+id/time2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/josefinsans_bold"
+                            android:layout_gravity="bottom"
+                            android:gravity="left"
+                            android:text="06.37"
+                            android:textColor="@color/purple"
+                            android:textSize="13sp" />
+                        <TextView
+                            android:id="@+id/invisible2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="DUMMY"
+                            android:textSize="15sp"
+                            android:visibility="invisible"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/bubbleSemdiri"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingStart="20dp"
+                android:layout_marginBottom="5dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:adjustViewBounds="true"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="20dp"
+                    android:src="@drawable/profile"
+                    android:visibility="invisible"/>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:gravity="center_vertical">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingEnd="20dp"
+                        android:weightSum="1">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_gravity="bottom|end"
+                            android:layout_marginEnd="3dp">
+
+                            <ImageView
+                                android:layout_width="15dp"
+                                android:layout_height="wrap_content"
+                                android:adjustViewBounds="true"
+                                android:layout_gravity="end"
+                                android:src="@drawable/read"
+                                android:layout_marginBottom="2dp"/>
+                            <TextView
+                                android:id="@+id/read"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:fontFamily="@font/josefinsans_bold"
+                                android:layout_gravity="bottom"
+                                android:gravity="end"
+                                android:text="06.52"
+                                android:textColor="@color/purple"
+                                android:textSize="13sp" />
+                        </LinearLayout>
+                        <TextView
+                            android:id="@+id/messageSelf"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/purple"
+                            android:fontFamily="@font/josefinsans_regular"
+                            android:textSize="15sp"
+                            android:background="@drawable/button_blue"
+                            android:text="Siap-siap bentar lagi MC dateng, ada yang liat @Anjass?"
+                            android:padding="10dp"
+                            android:gravity="center_vertical|end"
+                            android:layout_weight="1"/>
+                    </LinearLayout>
+
+                </LinearLayout>
+
             </LinearLayout>
 
         </LinearLayout>
+    </ScrollView>
 
-    </LinearLayout>
+
 
     <LinearLayout
         android:id="@+id/input"
@@ -234,8 +318,7 @@
             android:textSize="15sp"
             android:layout_margin="10dp"
             android:textAlignment="textStart"
-            android:text="testament"
-            android:background="@drawable/input_text_white"
+            android:background="@drawable/button_gray"
             android:layout_weight="3"/>
         <ImageButton
             android:layout_width="100px"

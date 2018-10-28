@@ -234,7 +234,6 @@
             android:textSize="15sp"
             android:layout_margin="10dp"
             android:textAlignment="textStart"
-            android:text="testament"
             android:background="@drawable/input_text_white"
             android:layout_weight="3"/>
         <ImageButton
