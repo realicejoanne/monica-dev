@@ -19,11 +19,10 @@
             </intent-filter>
         </activity>
         <activity android:name=".Auth" />
-        <activity android:name=".MainActivity"/>
+        <activity android:name=".MainActivity" />
         <activity
             android:name=".CreateCommittee"
             android:parentActivityName=".MainActivity" />
-
         <activity android:name=".CommitteeView" />
         <activity
             android:name=".Chat"
@@ -43,15 +42,16 @@
         <activity
             android:name=".FileCloud"
             android:parentActivityName=".CommitteeView" />
-
         <activity
             android:name=".ChatRoom"
             android:parentActivityName=".Chat" />
         <activity
             android:name=".ChannelRoom"
             android:parentActivityName=".Channel" />
-        <activity android:name=".CallRoom"
-            android:parentActivityName=".Call"/>
+        <activity
+            android:name=".CallRoom"
+            android:parentActivityName=".Call" />
+        <activity android:name=".CallVideoRoom"></activity>
     </application>
 
 </manifest>

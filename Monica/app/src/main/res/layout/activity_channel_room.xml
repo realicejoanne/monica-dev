@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     android:background="@color/gray"
-    tools:context=".ChannelRoom">
+    tools:context=".ChannelRoom"
+    android:weightSum="1">
 
     <LinearLayout
         android:id="@+id/toolbar"
@@ -20,28 +23,227 @@
         <ImageButton
             android:layout_width="100px"
             android:layout_height="match_parent"
-            android:src="@drawable/menu"
+            android:src="@drawable/back"
             android:background="@color/clear"
             android:scaleType="centerInside"
             android:layout_weight="1"/>
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/icon_circle_outerblue_pinkbg"
+            android:background="@drawable/grouppic"
+            android:scaleType="centerCrop"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="10dp"/>
         <TextView
             android:id="@+id/title"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:textColor="@color/purple"
-            android:fontFamily="@font/onedirection"
-            android:paddingBottom="5dp"
-            android:textSize="35sp"
-            android:text="MONICA"
-            android:gravity="center"
+            android:fontFamily="@font/josefinsans_bold"
+            android:textSize="23sp"
+            android:text="Supposed to be CHannel"
+            android:paddingTop="5dp"
+            android:paddingStart="10dp"
+            android:gravity="center_vertical"
             android:layout_weight="3"/>
         <ImageButton
             android:layout_width="100px"
             android:layout_height="match_parent"
-            android:src="@drawable/notification"
+            android:src="@drawable/profile"
             android:background="@color/clear"
             android:scaleType="centerInside"
             android:layout_weight="1"/>
     </LinearLayout>
 
-</android.support.constraint.ConstraintLayout>
+    <ListView
+        android:id="@+id/Chats"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1">
+    </ListView>
+
+    <LinearLayout
+        android:id="@+id/bubbleOrangLain"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingStart="5dp"
+        android:layout_marginBottom="5dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:adjustViewBounds="true"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:layout_marginEnd="5dp"
+            android:src="@drawable/profile"/>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/orang"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/josefinsans_bold"
+                android:gravity="left"
+                android:paddingStart="10dp"
+                android:text="Kentang"
+                android:textColor="@color/purple"
+                android:textSize="15sp" />
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+                <TextView
+                    android:id="@+id/message"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/blue"
+                    android:fontFamily="@font/josefinsans_regular"
+                    android:textSize="15sp"
+                    android:background="@drawable/button_purple"
+                    android:text="Banner apa kabar? Deadlinenya besok nih @Patricia"
+                    android:padding="10dp"
+                    android:gravity="center_vertical"
+                    android:layout_weight="1"/>
+                <TextView
+                    android:id="@+id/time"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/josefinsans_bold"
+                    android:layout_gravity="bottom"
+                    android:gravity="left"
+
+                    android:text="22.01"
+                    android:textColor="@color/purple"
+                    android:textSize="13sp" />
+                <TextView
+                    android:id="@+id/invisible"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="DUMMY"
+                    android:textSize="15sp"
+                    android:visibility="invisible"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/bubbleSemdiri"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingStart="20dp"
+        android:layout_marginBottom="5dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:adjustViewBounds="true"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:src="@drawable/profile"
+            android:visibility="invisible"/>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center_vertical">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingEnd="20dp"
+                android:weightSum="1">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_gravity="bottom|end"
+                    android:layout_marginEnd="3dp">
+
+                    <ImageView
+                        android:layout_width="15dp"
+                        android:layout_height="wrap_content"
+                        android:adjustViewBounds="true"
+                        android:layout_gravity="end"
+                        android:src="@drawable/read"
+                        android:layout_marginBottom="2dp"/>
+                    <TextView
+                        android:id="@+id/read"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:fontFamily="@font/josefinsans_bold"
+                        android:layout_gravity="bottom"
+                        android:gravity="end"
+                        android:text="22.01"
+                        android:textColor="@color/purple"
+                        android:textSize="13sp" />
+                </LinearLayout>
+                <TextView
+                    android:id="@+id/messageSelf"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/purple"
+                    android:fontFamily="@font/josefinsans_regular"
+                    android:textSize="15sp"
+                    android:background="@drawable/button_blue"
+                    android:text="Banner udah jadi ya tinggal diprint, tolong blngin logistik @Kentang"
+                    android:padding="10dp"
+                    android:gravity="center_vertical|end"
+                    android:layout_weight="1"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/input"
+        android:layout_width="match_parent"
+        android:layout_height="130px"
+        android:orientation="horizontal"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:background="@color/pink"
+        android:weightSum="5">
+
+        <ImageButton
+            android:layout_width="100px"
+            android:layout_height="match_parent"
+            android:src="@drawable/addnew"
+            android:background="@color/clear"
+            android:scaleType="centerInside"
+            android:layout_weight="1"/>
+        <EditText
+            android:id="@+id/pesan"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textColor="@color/purple"
+            android:fontFamily="@font/josefinsans_regular"
+            android:padding="7dp"
+            android:textSize="15sp"
+            android:layout_margin="10dp"
+            android:textAlignment="textStart"
+            android:text="testament"
+            android:background="@drawable/input_text_white"
+            android:layout_weight="3"/>
+        <ImageButton
+            android:layout_width="100px"
+            android:layout_height="match_parent"
+            android:src="@drawable/send"
+            android:background="@color/clear"
+            android:scaleType="centerInside"
+            android:layout_weight="1"/>
+    </LinearLayout>
+
+</LinearLayout>

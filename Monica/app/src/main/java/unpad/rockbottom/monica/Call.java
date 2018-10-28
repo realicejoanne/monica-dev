@@ -24,4 +24,15 @@ public class Call extends AppCompatActivity {
             Toast.makeText(getApplication(), e.getMessage(), Toast.LENGTH_SHORT).show();
         }
     }
+
+    public void onClickCallVideoRoom (View view){
+        try {
+            Intent i = new Intent(Call.this, CallVideoRoom.class);
+            startActivity(i);
+        }
+        catch (Exception e){
+            e.printStackTrace();
+            Toast.makeText(getApplication(), e.getMessage(), Toast.LENGTH_SHORT).show();
+        }
+    }
 }
