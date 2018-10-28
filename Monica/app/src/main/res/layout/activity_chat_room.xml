@@ -7,7 +7,8 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@color/gray"
-    tools:context=".ChatRoom">
+    tools:context=".ChatRoom"
+    android:weightSum="1">
 
     <LinearLayout
         android:id="@+id/toolbar"
@@ -58,49 +59,191 @@
     <ListView
         android:id="@+id/Chats"
         android:layout_width="match_parent"
-        android:layout_height="336dp" >
-
+        android:layout_height="wrap_content"
+        android:layout_weight="1">
     </ListView>
 
-    <RelativeLayout
-        android:id="@+id/messages"
+    <LinearLayout
+        android:id="@+id/bubbleOrangLain"
         android:layout_width="match_parent"
-        android:layout_height="70dp"
-        android:layout_gravity="bottom"
-        android:gravity="bottom"
-        android:background="@color/pink">
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingStart="5dp"
+        android:layout_marginBottom="5dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:adjustViewBounds="true"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:layout_marginEnd="5dp"
+            android:src="@drawable/profile"/>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/orang"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/josefinsans_bold"
+                android:gravity="left"
+                android:paddingStart="10dp"
+                android:text="Kentang"
+                android:textColor="@color/purple"
+                android:textSize="15sp" />
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+                <TextView
+                    android:id="@+id/message"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/blue"
+                    android:fontFamily="@font/josefinsans"
+                    android:textSize="15sp"
+                    android:background="@drawable/button_purple"
+                    android:text="Banner apa kabar? Deadlinenya besok nih @Patricia"
+                    android:padding="10dp"
+                    android:gravity="center_vertical"
+                    android:layout_weight="1"/>
+                <TextView
+                    android:id="@+id/time"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/josefinsans_bold"
+                    android:layout_gravity="bottom"
+                    android:gravity="left"
+
+                    android:text="22.01"
+                    android:textColor="@color/purple"
+                    android:textSize="13sp" />
+                <TextView
+                    android:id="@+id/invisible"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="DUMMY"
+                    android:textSize="15sp"
+                    android:visibility="invisible"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/bubbleSemdiri"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingStart="20dp"
+        android:layout_marginBottom="5dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:adjustViewBounds="true"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:src="@drawable/profile"
+            android:visibility="invisible"/>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center_vertical">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingEnd="20dp"
+                android:weightSum="1">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_gravity="bottom|end"
+                    android:layout_marginEnd="3dp">
+
+                    <ImageView
+                        android:layout_width="15dp"
+                        android:layout_height="wrap_content"
+                        android:adjustViewBounds="true"
+                        android:layout_gravity="end"
+                        android:src="@drawable/read"
+                        android:layout_marginBottom="2dp"/>
+                    <TextView
+                        android:id="@+id/read"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:fontFamily="@font/josefinsans_bold"
+                        android:layout_gravity="bottom"
+                        android:gravity="end"
+                        android:text="22.01"
+                        android:textColor="@color/purple"
+                        android:textSize="13sp" />
+                </LinearLayout>
+                <TextView
+                    android:id="@+id/messageSelf"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/purple"
+                    android:fontFamily="@font/josefinsans"
+                    android:textSize="15sp"
+                    android:background="@drawable/button_blue"
+                    android:text="Banner udah jadi ya tinggal diprint, tolong blngin logistik @Kentang"
+                    android:padding="10dp"
+                    android:gravity="center_vertical|end"
+                    android:layout_weight="1"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/input"
+        android:layout_width="match_parent"
+        android:layout_height="130px"
+        android:orientation="horizontal"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:background="@color/pink"
+        android:weightSum="5">
+
         <ImageButton
-            android:id="@+id/plusIcon"
-            android:layout_width="50dp"
+            android:layout_width="100px"
             android:layout_height="match_parent"
             android:src="@drawable/addnew"
             android:background="@color/clear"
-            android:padding="5dp"
-            android:scaleType="centerInside"/>
+            android:scaleType="centerInside"
+            android:layout_weight="1"/>
         <EditText
-            android:id="@+id/inputText"
-            android:layout_toEndOf="@+id/plusIcon"
-            android:layout_width="wrap_content"
+            android:id="@+id/pesan"
+            android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:textColor="@color/purple"
-            android:fontFamily="@font/josefinsans_bold"
-            android:textSize="23sp"
-            android:paddingTop="5dp"
-            android:paddingStart="10dp"
-            android:hint="Input Message"
-            android:gravity="center_vertical" />
-
+            android:fontFamily="@font/josefinsans"
+            android:padding="7dp"
+            android:textSize="15sp"
+            android:layout_margin="10dp"
+            android:textAlignment="textStart"
+            android:text="testament"
+            android:background="@drawable/input_text_white"
+            android:layout_weight="3"/>
         <ImageButton
-            android:id="@+id/send"
-            android:layout_width="50dp"
+            android:layout_width="100px"
             android:layout_height="match_parent"
-            android:padding="10dp"
-            android:layout_alignParentTop="true"
-            android:layout_toEndOf="@id/inputText"
+            android:src="@drawable/send"
             android:background="@color/clear"
             android:scaleType="centerInside"
-            android:src="@drawable/send" />
-
-    </RelativeLayout>
+            android:layout_weight="1"/>
+    </LinearLayout>
 
 </LinearLayout>
