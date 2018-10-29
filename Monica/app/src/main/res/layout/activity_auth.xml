@@ -109,4 +109,20 @@
         app:layout_marginBottomPercent="19%"
         app:layout_marginStartPercent="20%" />
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center" >
+
+        <ImageButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scaleType="centerInside"
+            android:paddingStart="40dp"
+            android:paddingEnd="40dp"
+            android:background="@color/clear"
+            android:layout_gravity="bottom"
+            android:src="@drawable/google"/>
+    </LinearLayout>
+
 </android.support.percent.PercentRelativeLayout>

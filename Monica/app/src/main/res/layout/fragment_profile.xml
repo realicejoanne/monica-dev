@@ -125,8 +125,9 @@
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:contentDescription="logoSelected"
-                android:background="@color/clear"
-                android:src="@drawable/homeeclipse"
+                android:background="@drawable/edit_round"
+                android:padding="20dp"
+                android:src="@drawable/committee"
                 android:scaleType="centerInside"
                 android:onClick="onClickChatRoom"/>
         </LinearLayout>

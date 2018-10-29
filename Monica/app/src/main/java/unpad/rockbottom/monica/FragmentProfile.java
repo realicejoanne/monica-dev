@@ -23,21 +23,6 @@ public class FragmentProfile extends Fragment {
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_profile, container, false);
 
-        cbs_btn = (ImageButton) view.findViewById(R.id.cbs_btn);
-        cbs_btn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                try {
-                    Intent i = new Intent(getActivity(), CommitteeView.class);
-                    startActivity(i);
-                }
-                catch (Exception e){
-                    e.printStackTrace();
-                    Toast.makeText(getActivity(), e.getMessage(), Toast.LENGTH_SHORT).show();
-                }
-
-            }
-        });
 
         return view;
     }

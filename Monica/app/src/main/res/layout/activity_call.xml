@@ -199,6 +199,7 @@
                     android:textColor="@color/gray"
                     android:fontFamily="@font/josefinsans"
                     android:background="@drawable/button_pink"
+                    android:onClick="onClickCallVideoRoom"
                     android:layout_weight="1"/>
             </LinearLayout>
         </LinearLayout>

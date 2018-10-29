@@ -16,9 +16,9 @@ public class FileCloud extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_file_cloud);
         final ArrayList<FileItem> files = new ArrayList<>();
-        files.add(new FileItem("Desain",R.drawable.folder));
-        files.add(new FileItem("Notulensi",R.drawable.folder));
-        files.add(new FileItem("Humas",R.drawable.folder));
+        files.add(new FileItem("Desain",R.drawable.folders));
+        files.add(new FileItem("Notulensi",R.drawable.folders));
+        files.add(new FileItem("Humas",R.drawable.folders));
         files.add(new FileItem("",R.drawable.folder));
         files.add(new FileItem("",R.drawable.file));
         GridView gridView = (GridView)findViewById(R.id.grid_files);
@@ -27,13 +27,12 @@ public class FileCloud extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int position, long id) {
                 FileItem fileItemAdapter = files.get(position);
-                Toast.makeText(FileCloud.this, "Posisi: "+position, Toast.LENGTH_SHORT)
-                        .show();
+                //Toast.makeText(FileCloud.this, "Posisi: "+position, Toast.LENGTH_SHORT).show();
                 if (position == (files.size()-2)) {
-                    files.add((files.size()-2),new FileItem("Tambahan", R.drawable.folder));
+                    files.add((files.size()-2),new FileItem("Tambahan " +(files.size()-4), R.drawable.folders));
                 }
                 if (position == (files.size()-1)){
-                    files.add((files.size()-2),new FileItem("Tambahan", R.drawable.file));
+                    files.add((files.size()-2),new FileItem("Tambahan" +(files.size()-4), R.drawable.files));
                 }
                 filesAdapter.notifyDataSetChanged();
             }

@@ -35,7 +35,7 @@ public class ItemList extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_channel_room);
+        setContentView(R.layout.activity_item_list);
 
         databaseToDoList = FirebaseDatabase.getInstance().getReference("itemList");
         toDoListView = (ListView) findViewById(R.id.toDoList);
