@@ -6,57 +6,69 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/logo"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Splash">
+        <activity android:name=".Splash"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Auth" />
-        <activity android:name=".MainActivity" />
+        <activity android:name=".Auth"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".MainActivity"
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".CreateCommittee"
-            android:parentActivityName=".MainActivity" />
-        <activity android:name=".CommitteeView" />
+            android:parentActivityName=".MainActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".CommitteeView"
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".Chat"
-            android:parentActivityName=".CommitteeView" />
+            android:parentActivityName=".CommitteeView"
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".Call"
-            android:parentActivityName=".CommitteeView" />
+            android:parentActivityName=".CommitteeView"
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".Channel"
-            android:parentActivityName=".CommitteeView" />
+            android:parentActivityName=".CommitteeView"
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".ToDoList"
-            android:parentActivityName=".CommitteeView" />
+            android:parentActivityName=".CommitteeView"
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".ItemList"
-            android:parentActivityName=".CommitteeView" />
+            android:parentActivityName=".CommitteeView"
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".FileCloud"
-            android:parentActivityName=".CommitteeView" />
+            android:parentActivityName=".CommitteeView"
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".ChatRoom"
-            android:parentActivityName=".Chat" />
+            android:parentActivityName=".Chat"
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".ChannelRoom"
             android:parentActivityName=".Channel"
-            android:windowSoftInputMode="adjustResize" />
+            android:windowSoftInputMode="adjustResize"
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".CallRoom"
-            android:parentActivityName=".Call" />
-        <activity android:name=".CallVideoRoom" />
-        <activity
-            android:name=".DeleteLater"
-            android:label="@string/title_activity_delete_later"
-            android:theme="@style/AppTheme"></activity>
+            android:parentActivityName=".Call"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".CallVideoRoom"
+            android:screenOrientation="portrait"/>
+
     </application>
 
 </manifest>

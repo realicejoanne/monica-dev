@@ -179,9 +179,7 @@
                 android:layout_marginLeft="33dp"
                 android:layout_marginRight="33dp"
                 android:minDate="01/01/2018"
-                android:theme="@style/CalendarViewCustom"
-                android:dateTextAppearance="@style/CalendarViewPurple"
-                android:weekDayTextAppearance="@style/CalendarViewPurple" />
+                android:theme="@style/CalendarViewCustom" />
         </LinearLayout>
     </ScrollView>
 

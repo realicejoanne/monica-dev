@@ -17,6 +17,7 @@
         android:text="Divisi"
         android:textColor="@color/gray"
         android:fontFamily="@font/josefinsans_bold"
+        android:layout_marginTop="20dp"
         android:textSize="20sp"
         android:padding="7dp"
         android:background="@drawable/button_purple"/>
@@ -27,14 +28,14 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:background="@drawable/edit_list_outer"
-        android:layout_marginTop="5dp">
+        android:layout_marginTop="5dp" >
 
         <CheckBox
             android:id="@+id/pesan"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:buttonTint="@color/purple"
-            android:fontFamily="@font/josefinsans_bold"
+            android:fontFamily="@font/josefinsans_regular"
             android:textColor="@color/purple"
             android:textSize="18sp"
             android:text="This will be the isiPesan"

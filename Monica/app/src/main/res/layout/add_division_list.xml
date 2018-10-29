@@ -20,6 +20,7 @@
         android:layout_toRightOf="@id/division_icon"
         app:backgroundTint = "@color/purple"
         android:textColorHint="@color/purple"
+        android:textColor="@color/purple"
         android:fontFamily="@font/josefinsans_italic"
         android:hint="Divisi Acara"
         android:layout_width="match_parent"

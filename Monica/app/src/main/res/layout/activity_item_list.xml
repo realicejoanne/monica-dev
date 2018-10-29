@@ -41,8 +41,8 @@
                 android:fontFamily="@font/josefinsans_bold"
                 android:paddingLeft="15dp"
                 android:paddingRight="15dp"
-                android:hint="Add new task..."
-                android:textSize="20sp"
+                android:hint="Add new item..."
+                android:textSize="18sp"
                 android:textColorHint="@color/gray"
                 android:background="@color/purple"/>
         </LinearLayout>

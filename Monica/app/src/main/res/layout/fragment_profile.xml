@@ -98,7 +98,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textColor="@color/purple"
-        android:fontFamily="@font/josefinsans"
+        android:fontFamily="@font/josefinsans_regular"
         android:layout_marginTop="35dp"
         android:paddingLeft="20dp"
         android:paddingRight="20dp"
@@ -127,8 +127,7 @@
                 android:background="@drawable/edit_round"
                 android:padding="20dp"
                 android:src="@drawable/committee"
-                android:scaleType="centerInside"
-                android:onClick="onClickChatRoom"/>
+                android:scaleType="centerInside" />
         </LinearLayout>
         <LinearLayout
             android:layout_width="wrap_content"
@@ -144,8 +143,7 @@
                 android:src="@drawable/committee"
                 android:background="@drawable/edit_round"
                 android:padding="20dp"
-                android:scaleType="centerInside"
-                android:onClick="onClickLiveCall"/>
+                android:scaleType="centerInside" />
         </LinearLayout>
         <LinearLayout
             android:layout_width="wrap_content"
@@ -161,8 +159,7 @@
                 android:src="@drawable/committee"
                 android:background="@drawable/edit_round"
                 android:padding="20dp"
-                android:scaleType="centerInside"
-                android:onClick="onClickChannels"/>
+                android:scaleType="centerInside" />
         </LinearLayout>
     </LinearLayout>
 

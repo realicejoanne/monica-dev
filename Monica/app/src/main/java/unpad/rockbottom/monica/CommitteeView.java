@@ -111,7 +111,7 @@ public class CommitteeView extends AppCompatActivity {
         activity = this;
         // setup the alert builder
         final AlertDialog.Builder builder = new AlertDialog.Builder(new ContextThemeWrapper(this,
-                R.style.AlertDialogCustom)).setTitle("Mengakhiri Kepanitian Ini?").setMessage("");
+                R.style.AlertDialogCustom)).setTitle("Akhiri Kepanitiaan Ini?").setMessage("");
 
         // add the buttons
         builder.setPositiveButton("YA", new DialogInterface.OnClickListener() {

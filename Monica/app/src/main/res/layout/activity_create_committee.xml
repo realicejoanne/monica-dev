@@ -149,6 +149,7 @@
                     android:id="@+id/add_division_name"
                     app:backgroundTint = "@color/purple"
                     android:textColorHint="@color/purple"
+                    android:textColor="@color/purple"
                     android:fontFamily="@font/josefinsans_italic"
                     android:hint="Add division"
                     android:layout_toRightOf="@id/add_division_icon"

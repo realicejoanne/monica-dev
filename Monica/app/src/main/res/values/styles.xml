@@ -11,8 +11,17 @@
         <item name="android:textViewStyle">@style/JosefinSansText</item>
     </style>
 
+
     <style name="JosefinSansText" parent="android:Widget.TextView">
         <item name="android:fontFamily">@font/josefinsans</item>
+    </style>
+
+
+    <style name="Widget.CalendarView.Monica" parent="android:Widget.CalendarView">
+        <item name="android:focusedMonthDateColor">@color/purple</item>
+        <item name="android:weekNumberColor">@color/pink</item>
+        <item name="android:selectedDateVerticalBar">@color/pink</item>
+        <item name="android:selectedWeekBackgroundColor">@color/pink</item>
     </style>
 
     <style name="CalendarViewCustom" parent="Theme.AppCompat">
