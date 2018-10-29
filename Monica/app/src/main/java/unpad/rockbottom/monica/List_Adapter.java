@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.graphics.Paint;
 import android.support.annotation.NonNull;
 import android.support.v4.content.ContextCompat;
+import android.support.v4.content.res.ResourcesCompat;
 import android.support.v7.widget.AppCompatCheckBox;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -25,8 +26,10 @@ import java.util.List;
 public class List_Adapter extends ArrayAdapter<List_Class> {
     private Activity context;
     private List<List_Class> taskList;
-    CheckBox isiPesan;
-    List_Class pesan;
+    private CheckBox isiPesan;
+    private List_Class pesan;
+    private LinearLayout linearLayout;
+    private ImageButton delete;
 
     TextView divisi;
 
@@ -49,8 +52,8 @@ public class List_Adapter extends ArrayAdapter<List_Class> {
         listViewItem = inflater.inflate(R.layout.list_layout, null, true);
 
         divisi = (TextView) listViewItem.findViewById(R.id.divisi);
-        ImageButton delete = (ImageButton) listViewItem.findViewById(R.id.delete);
-        LinearLayout linearLayout = (LinearLayout) listViewItem.findViewById(R.id.linearLayoutID);
+        delete = (ImageButton) listViewItem.findViewById(R.id.delete);
+        linearLayout = (LinearLayout) listViewItem.findViewById(R.id.linearLayoutID);
         isiPesan = (CheckBox) listViewItem.findViewById(R.id.pesan);
         isiPesan.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener()
         {
@@ -66,6 +69,7 @@ public class List_Adapter extends ArrayAdapter<List_Class> {
                 }
             }
         });
+        isiPesan.setTypeface(ResourcesCompat.getFont(getContext(), R.font.josefinsans_regular));
 
         // if it is a header
         if (pesan.getId().equals("0XX0")){
@@ -75,12 +79,11 @@ public class List_Adapter extends ArrayAdapter<List_Class> {
             divisi.setLayoutParams(params);
             divisi.setText(pesan.getDivisi());
             linearLayout.removeAllViews();
-            linearLayout.setBackground(null);
+            linearLayout.setVisibility(View.GONE);
         }
         // if it is a normal taskList
         else{
-            divisi.setHeight(0);
-            divisi.setWidth(0);
+            divisi.setVisibility(View.GONE);
             isiPesan.postDelayed(new Runnable() {
                 @Override
                 public void run() {

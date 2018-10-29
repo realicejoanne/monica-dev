@@ -1,10 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     android:background="@color/gray"
+    android:weightSum="2"
     tools:context=".CallRoom">
 
     <LinearLayout
@@ -18,30 +21,310 @@
         android:weightSum="5">
 
         <ImageButton
+            android:id="@+id/back"
             android:layout_width="100px"
             android:layout_height="match_parent"
-            android:src="@drawable/menu"
+            android:src="@drawable/back"
             android:background="@color/clear"
             android:scaleType="centerInside"
             android:layout_weight="1"/>
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/icon_circle_outerblue_pinkbg"
+            android:background="@drawable/grouppic"
+            android:scaleType="centerCrop"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="10dp"/>
         <TextView
             android:id="@+id/title"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:textColor="@color/purple"
-            android:fontFamily="@font/onedirection"
-            android:paddingBottom="5dp"
-            android:textSize="35sp"
-            android:text="MONICA"
-            android:gravity="center"
+            android:fontFamily="@font/josefinsans_bold"
+            android:textSize="23sp"
+            android:text="Panitia Inti"
+            android:paddingTop="5dp"
+            android:paddingStart="10dp"
+            android:gravity="center_vertical"
             android:layout_weight="3"/>
         <ImageButton
             android:layout_width="100px"
             android:layout_height="match_parent"
-            android:src="@drawable/notification"
+            android:src="@drawable/profile"
             android:background="@color/clear"
             android:scaleType="centerInside"
             android:layout_weight="1"/>
     </LinearLayout>
 
-</android.support.constraint.ConstraintLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_weight="1"
+        android:background="@color/purple">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:weightSum="4">
+
+            <ImageButton
+                android:id="@+id/speak_btn"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/logo"
+                android:background="@color/clear"
+                android:scaleType="centerInside"
+                android:layout_weight="2"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center_horizontal"
+                android:layout_weight="3">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/signal"
+                    android:scaleType="centerCrop"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="10dp"/>
+                <TextView
+                    android:id="@+id/timePasses"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:textColor="@color/pink"
+                    android:fontFamily="@font/josefinsans_bold"
+                    android:textSize="23sp"
+                    android:text="00 : 09 : 11"
+                    android:paddingTop="5dp"
+                    android:paddingStart="10dp"
+                    android:gravity="center_vertical" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:layout_weight="1">
+
+        <TextView
+            android:id="@+id/recent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/purple"
+            android:fontFamily="@font/josefinsans_regular"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="10dp"
+            android:textSize="20sp"
+            android:text="Recent LIVE"
+            android:gravity="center_vertical" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp"
+            android:weightSum="2">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/signal"
+                    android:scaleType="centerCrop"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="10dp"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textColor="@color/pink"
+                    android:fontFamily="@font/josefinsans_bold"
+                    android:textSize="23sp"
+                    android:text="01 : 10 : 10"
+                    android:paddingStart="5dp"
+                    android:gravity="center_vertical" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:layout_weight="1">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/button_purple"
+                    android:scaleType="centerInside"
+                    android:textAlignment="center"
+                    android:paddingTop="7dp"
+                    android:paddingStart="7dp"
+                    android:paddingEnd="7dp"
+                    android:textSize="15sp"
+                    android:fontFamily="@font/josefinsans_regular"
+                    android:text="PLAY"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/button_purple"
+                    android:scaleType="centerInside"
+                    android:textAlignment="center"
+                    android:layout_marginStart="5dp"
+                    android:maxLines="1"
+                    android:paddingTop="7dp"
+                    android:paddingStart="7dp"
+                    android:paddingEnd="7dp"
+                    android:textSize="15sp"
+                    android:fontFamily="@font/josefinsans_regular"
+                    android:text="DOWNLOAD"/>
+            </LinearLayout>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp"
+            android:weightSum="2">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/signal"
+                    android:scaleType="centerCrop"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="10dp"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textColor="@color/pink"
+                    android:fontFamily="@font/josefinsans_bold"
+                    android:textSize="23sp"
+                    android:text="00 : 02 : 22"
+                    android:paddingStart="5dp"
+                    android:gravity="center_vertical" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:layout_weight="1">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/button_purple"
+                    android:scaleType="centerInside"
+                    android:textAlignment="center"
+                    android:paddingTop="7dp"
+                    android:paddingStart="7dp"
+                    android:paddingEnd="7dp"
+                    android:textSize="15sp"
+                    android:fontFamily="@font/josefinsans_regular"
+                    android:text="PLAY"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/button_purple"
+                    android:scaleType="centerInside"
+                    android:textAlignment="center"
+                    android:layout_marginStart="5dp"
+                    android:maxLines="1"
+                    android:paddingTop="7dp"
+                    android:paddingStart="7dp"
+                    android:paddingEnd="7dp"
+                    android:textSize="15sp"
+                    android:fontFamily="@font/josefinsans_regular"
+                    android:text="DOWNLOAD"/>
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp"
+            android:weightSum="2">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/signal"
+                    android:scaleType="centerCrop"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="10dp"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textColor="@color/pink"
+                    android:fontFamily="@font/josefinsans_bold"
+                    android:textSize="23sp"
+                    android:text="00 : 01 : 11"
+                    android:paddingStart="5dp"
+                    android:gravity="center_vertical" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:layout_weight="1">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/button_purple"
+                    android:scaleType="centerInside"
+                    android:textAlignment="center"
+                    android:paddingTop="7dp"
+                    android:paddingStart="7dp"
+                    android:paddingEnd="7dp"
+                    android:textSize="15sp"
+                    android:fontFamily="@font/josefinsans_regular"
+                    android:text="PLAY"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/button_purple"
+                    android:scaleType="centerInside"
+                    android:textAlignment="center"
+                    android:layout_marginStart="5dp"
+                    android:maxLines="1"
+                    android:paddingTop="7dp"
+                    android:paddingStart="7dp"
+                    android:paddingEnd="7dp"
+                    android:textSize="15sp"
+                    android:fontFamily="@font/josefinsans_regular"
+                    android:text="DOWNLOAD"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>

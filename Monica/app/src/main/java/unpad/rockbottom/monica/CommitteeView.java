@@ -18,6 +18,12 @@ import android.widget.Toast;
 import com.github.ybq.android.spinkit.style.ThreeBounce;
 
 public class CommitteeView extends AppCompatActivity {
+
+    AlertDialog.Builder dialog;
+    LayoutInflater inflater;
+    View dialogView;
+    ProgressBar progressBar;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -105,22 +111,21 @@ public class CommitteeView extends AppCompatActivity {
         activity = this;
         // setup the alert builder
         final AlertDialog.Builder builder = new AlertDialog.Builder(new ContextThemeWrapper(this,
-                R.style.AlertDialogCustom)).setTitle("Mengakhiri Kepanitian Ini?").setMessage("");
+                R.style.AlertDialogCustom)).setTitle("Akhiri Kepanitiaan Ini?").setMessage("");
 
         // add the buttons
         builder.setPositiveButton("YA", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
-                Toast.makeText(CommitteeView.this, "YA", Toast.LENGTH_SHORT).show();
-//                ProgressDialog progressDialog = ProgressDialog.show(CommitteeView.this, "",
-//                        "Loading. Please wait...", true);
-
+                //Toast.makeText(CommitteeView.this, "YA", Toast.LENGTH_SHORT).show();
+                //ProgressDialog progressDialog = ProgressDialog.show(CommitteeView.this, "",
+                    //"Loading. Please wait...", true);
                 loadingDialog();
                 final Handler handler = new Handler();
                 handler.postDelayed(new Runnable() {
                     @Override
                     public void run() {
-                        startActivity(new Intent(getApplicationContext(), MainActivity.class));
+                        onStop();
                         finish();
                     }
                 }, 3000L); //3000 L = 3 detik
@@ -130,7 +135,7 @@ public class CommitteeView extends AppCompatActivity {
         builder.setNegativeButton("TIDAK", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
-                Toast.makeText(CommitteeView.this, "TIDAK", Toast.LENGTH_SHORT).show();
+                //Toast.makeText(CommitteeView.this, "TIDAK", Toast.LENGTH_SHORT).show();
             }
         });
         // create and show the alert dialog
@@ -146,10 +151,7 @@ public class CommitteeView extends AppCompatActivity {
         });
         dialog.show();
     }
-    AlertDialog.Builder dialog;
-    LayoutInflater inflater;
-    View dialogView;
-    ProgressBar progressBar;
+
     private void loadingDialog(){
         dialog = new AlertDialog.Builder(CommitteeView.this);
         inflater = getLayoutInflater();

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:paddingTop="10dp"
     android:paddingLeft="30dp"
     android:paddingRight="30dp"
@@ -8,16 +9,18 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <ImageView
         android:id="@+id/division_icon"
-        android:src="@drawable/grouppic"
+        android:src="@drawable/icon_circle_outerblue"
+        android:background="@drawable/grouppic"
         android:layout_width="30dp"
         android:layout_height="30dp" />
     <EditText
+        android:id="@+id/division_name"
         android:maxLength="100"
         android:maxLines="1"
-        android:id="@+id/division_name"
         android:layout_toRightOf="@id/division_icon"
         app:backgroundTint = "@color/purple"
         android:textColorHint="@color/purple"
+        android:textColor="@color/purple"
         android:fontFamily="@font/josefinsans_italic"
         android:hint="Divisi Acara"
         android:layout_width="match_parent"

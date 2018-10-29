@@ -8,42 +8,9 @@
     android:background="@color/gray"
     tools:context=".FileCloud">
 
-    <LinearLayout
-        android:id="@+id/toolbar"
-        android:layout_width="match_parent"
-        android:layout_height="130px"
-        android:orientation="horizontal"
-        android:paddingLeft="10dp"
-        android:paddingRight="10dp"
-        android:background="@color/pink"
-        android:weightSum="5">
+    <include layout="@layout/toolbar_child"
+        android:id="@+id/toolbar"/>
 
-        <ImageButton
-            android:layout_width="100px"
-            android:layout_height="match_parent"
-            android:src="@drawable/back"
-            android:background="@color/clear"
-            android:scaleType="centerInside"
-            android:layout_weight="1"/>
-        <TextView
-            android:id="@+id/title"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:textColor="@color/purple"
-            android:fontFamily="@font/onedirection"
-            android:paddingBottom="5dp"
-            android:textSize="35sp"
-            android:text="FILES"
-            android:gravity="center"
-            android:layout_weight="3"/>
-        <ImageButton
-            android:layout_width="100px"
-            android:layout_height="match_parent"
-            android:src="@drawable/profile"
-            android:background="@color/clear"
-            android:scaleType="centerInside"
-            android:layout_weight="1"/>
-    </LinearLayout>
     <LinearLayout
         android:layout_below="@id/toolbar"
         android:orientation="horizontal"
@@ -62,8 +29,8 @@
         <EditText
             android:layout_gravity="center_vertical"
             android:hint="Search..."
+            android:textColorHint="@color/gray"
             android:textSize="20sp"
-            android:lines="1"
             android:maxLines="1"
             android:background="@null"
             android:singleLine="true"
@@ -71,13 +38,13 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
     </LinearLayout>
+
     <GridView
+        android:id="@+id/grid_files"
         android:layout_marginTop="30dp"
-        android:layout_marginLeft="30dp"
         android:numColumns="3"
         android:verticalSpacing="10dp"
         android:layout_below="@id/search_file"
-        android:id="@+id/grid_files"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 

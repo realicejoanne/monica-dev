@@ -1,5 +1,6 @@
 package unpad.rockbottom.monica;
 
+import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -7,6 +8,7 @@ import android.view.ViewConfiguration;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ListView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.firebase.database.DataSnapshot;
@@ -25,6 +27,8 @@ public class ItemList extends AppCompatActivity {
     private EditText addTask;
     private ImageButton addTaskButton;
     private ListView toDoListView;
+    private ImageButton back_btn;
+    private TextView title;
 
     DatabaseReference databaseToDoList;
     private List<List_Class> taskList, taskListGrouped;
@@ -35,7 +39,7 @@ public class ItemList extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_channel_room);
+        setContentView(R.layout.activity_item_list);
 
         databaseToDoList = FirebaseDatabase.getInstance().getReference("itemList");
         toDoListView = (ListView) findViewById(R.id.toDoList);
@@ -44,6 +48,23 @@ public class ItemList extends AppCompatActivity {
 
         addTask = findViewById(R.id.addTask);
         addTaskButton = findViewById(R.id.addTaskButton);
+
+        back_btn = (ImageButton) findViewById(R.id.back);
+        back_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                final Handler handler = new Handler();
+                handler.post(new Runnable() {
+                    @Override
+                    public void run() {
+                        onStop();
+                        finish();
+                    }
+                });
+            }
+        });
+        title = (TextView) findViewById(R.id.titleToolbar);
+        title.setText("Item List");
     }
 
     @Override

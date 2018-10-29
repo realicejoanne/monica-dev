@@ -17,10 +17,11 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:paddingLeft="20dp"
-        android:paddingRight="20dp"
-        android:paddingTop="30dp"
-        android:paddingBottom="10dp">
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:onClick="onClickChatRoom">
 
         <ImageView
             android:layout_width="70dp"
@@ -49,7 +50,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:textColor="@color/purple"
-                android:fontFamily="@font/josefinsans"
+                android:fontFamily="@font/josefinsans_regular"
                 android:textSize="15sp"
                 android:text="Banner udh jadi ya tinggal..."
                 android:layout_weight="1"/>
@@ -88,8 +89,8 @@
         android:id="@+id/separator1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
         android:background="@drawable/separator_line_blue"/>
 
     <LinearLayout
@@ -97,8 +98,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:paddingLeft="20dp"
-        android:paddingRight="20dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
         android:paddingTop="10dp"
         android:paddingBottom="10dp">
 
@@ -127,7 +128,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:textColor="@color/purple"
-                android:fontFamily="@font/josefinsans"
+                android:fontFamily="@font/josefinsans_regular"
                 android:textSize="15sp"
                 android:text="Tadi udah diambil @Rifqy..."
                 android:layout_weight="1"/>
@@ -168,8 +169,8 @@
         android:id="@+id/separator2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
         android:background="@drawable/separator_line_blue"/>
 
     <LinearLayout
@@ -177,8 +178,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:paddingLeft="20dp"
-        android:paddingRight="20dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
         android:paddingTop="10dp"
         android:paddingBottom="10dp">
 
@@ -209,7 +210,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:textColor="@color/purple"
-                android:fontFamily="@font/josefinsans"
+                android:fontFamily="@font/josefinsans_regular"
                 android:textSize="15sp"
                 android:text="Jangan lupa besok kita rapa..."
                 android:layout_weight="1"/>
@@ -251,8 +252,8 @@
         android:id="@+id/separator3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
         android:background="@drawable/separator_line_blue"/>
 
     <LinearLayout
@@ -260,8 +261,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:paddingLeft="20dp"
-        android:paddingRight="20dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
         android:paddingTop="10dp"
         android:paddingBottom="10dp">
 
@@ -290,7 +291,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:textColor="@color/purple"
-                android:fontFamily="@font/josefinsans"
+                android:fontFamily="@font/josefinsans_regular"
                 android:textSize="15sp"
                 android:text="Semangat semuanyaaa!!!"
                 android:layout_weight="1"/>

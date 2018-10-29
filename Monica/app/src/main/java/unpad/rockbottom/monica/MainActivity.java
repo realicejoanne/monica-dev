@@ -20,6 +20,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
         sDrawerLayout = (DrawerLayout) findViewById(R.id.drawer);
         sToogle = new ActionBarDrawerToggle(this,sDrawerLayout,R.string.open,R.string.close);
         sDrawerLayout.addDrawerListener(sToogle);
@@ -44,21 +45,21 @@ public class MainActivity extends AppCompatActivity {
     private BottomNavigationView.OnNavigationItemSelectedListener navListener = new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-                Fragment selectedFragment = null;
-                switch (item.getItemId()) {
-                    case R.id.home_menu:
-                        selectedFragment = new FragmentHome();
-                        break;
-                    case R.id.profile_menu:
-                        selectedFragment = new FragmentProfile();
-                        break;
-                    case R.id.settings_menu:
-                        selectedFragment = new FragmentSettings();
-                        break;
-                }
+        Fragment selectedFragment = null;
+        switch (item.getItemId()) {
+            case R.id.home_menu:
+                selectedFragment = new FragmentHome();
+                break;
+            case R.id.profile_menu:
+                selectedFragment = new FragmentProfile();
+                break;
+            case R.id.settings_menu:
+                selectedFragment = new FragmentSettings();
+                break;
+        }
 
-                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, selectedFragment).commit();
-                return true;
+        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, selectedFragment).commit();
+        return true;
             }
     };
 }

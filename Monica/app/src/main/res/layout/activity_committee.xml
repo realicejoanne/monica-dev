@@ -9,24 +9,58 @@
     android:background="@color/gray"
     tools:context=".CommitteeView">
 
-    <include layout="@layout/toolbar_main"
-        android:id="@+id/toolbar"/>
+    <LinearLayout
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="130px"
+        android:orientation="horizontal"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:background="@color/pink"
+        android:weightSum="5">
+
+        <ImageButton
+            android:layout_width="100px"
+            android:layout_height="match_parent"
+            android:src="@drawable/menu"
+            android:background="@color/clear"
+            android:scaleType="centerInside"
+            android:layout_weight="1"/>
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textColor="@color/purple"
+            android:fontFamily="@font/onedirection"
+            android:paddingBottom="5dp"
+            android:textSize="35sp"
+            android:text="MONICA"
+            android:gravity="center"
+            android:layout_weight="3"/>
+        <ImageButton
+            android:layout_width="100px"
+            android:layout_height="match_parent"
+            android:src="@drawable/notification"
+            android:background="@color/clear"
+            android:scaleType="centerInside"
+            android:layout_weight="1"/>
+    </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/summary"
-        android:layout_below="@id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:paddingLeft="20dp"
         android:paddingRight="20dp"
-        android:layout_marginTop="40dp">
+        android:layout_marginTop="20dp">
         <ImageView
             android:id="@+id/imageCommittee"
             android:layout_width="100dp"
             android:layout_height="100dp"
+            android:contentDescription="logoSelected"
             android:src="@drawable/homeeclipse"
             android:scaleType="centerCrop"/>
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -54,7 +88,7 @@
                 android:maxLines="1"
                 android:textSize="14sp"
                 android:text="Ospek jurusan di TI Unpad 2018"
-                android:layout_weight="1" />
+                android:layout_weight="1"/>
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -66,7 +100,7 @@
                     android:layout_width="30dp"
                     android:layout_height="30dp"
                     android:paddingRight="5dp"
-                    android:src="@drawable/profile"
+                    app:srcCompat="@drawable/profile"
                     android:layout_gravity="center_vertical"/>
                 <TextView
                     android:id="@+id/jumlahPanitia"
@@ -75,9 +109,8 @@
                     android:textColor="@color/purple"
                     android:fontFamily="@font/josefinsans_bold"
                     android:layout_gravity="center_vertical"
-                    android:paddingLeft="10dp"
-                    android:paddingRight="30dp"
-                    android:textSize="25sp"
+                    android:paddingRight="25dp"
+                    android:textSize="20sp"
                     android:text="60"/>
                 <TextView
                     android:id="@+id/selesai"
@@ -87,7 +120,7 @@
                     android:fontFamily="@font/josefinsans_bold"
                     android:layout_gravity="center_vertical"
                     android:background="@drawable/button_pink"
-                    android:padding="10dp"
+                    android:padding="6dp"
                     android:maxLines="1"
                     android:textSize="12sp"
                     android:onClick="onClickFinish"
@@ -97,70 +130,77 @@
     </LinearLayout>
 
     <TextView
-        android:layout_below="@id/summary"
         android:id="@+id/connect"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textColor="@color/purple"
-        android:fontFamily="@font/josefinsans"
-        android:layout_marginTop="35dp"
+        android:fontFamily="@font/josefinsans_bold"
+        android:layout_marginTop="25dp"
+        android:layout_marginBottom="10dp"
         android:paddingLeft="20dp"
         android:paddingRight="20dp"
-        android:paddingBottom="20dp"
         android:textSize="20sp"
         android:text="Connect with others"/>
 
     <LinearLayout
-        android:layout_below="@+id/connect"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center"
         android:orientation="horizontal"
         android:paddingLeft="20dp"
         android:paddingRight="20dp"
         android:weightSum="3">
-
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:layout_weight="1"
             android:gravity="center_horizontal">
-
             <ImageView
                 android:id="@+id/chat"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
-                android:layout_marginRight="10dp"
-                android:src="@drawable/chat"
+                android:contentDescription="logoSelected"
+                app:srcCompat="@drawable/chat"
                 android:background="@drawable/edit_round"
                 android:padding="20dp"
-                android:scaleType="centerInside"/>
-
+                android:scaleType="centerInside"
+                android:onClick="onClickChatRoom"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_weight="1"
+            android:gravity="center_horizontal">
             <ImageView
                 android:id="@+id/call"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
-                android:src="@drawable/call"
+                android:contentDescription="logoSelected"
+                app:srcCompat="@drawable/call"
                 android:background="@drawable/edit_round"
                 android:padding="20dp"
-                android:scaleType="centerInside"/>
-
+                android:scaleType="centerInside"
+                android:onClick="onClickLiveCall"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_weight="1"
+            android:gravity="center_horizontal">
             <ImageView
                 android:id="@+id/channel"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
-                android:layout_marginLeft="10dp"
-                android:src="@drawable/microphone"
+                android:contentDescription="logoSelected"
+                app:srcCompat="@drawable/microphone"
                 android:background="@drawable/edit_round"
                 android:padding="20dp"
-                android:scaleType="centerInside"/>
+                android:scaleType="centerInside"
+                android:onClick="onClickChannels"/>
         </LinearLayout>
-
     </LinearLayout>
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -180,7 +220,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textColor="@color/purple"
-                android:fontFamily="@font/josefinsans"
+                android:fontFamily="@font/josefinsans_regular"
                 android:layout_marginTop="5dp"
                 android:paddingLeft="20dp"
                 android:paddingRight="20dp"
@@ -200,7 +240,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textColor="@color/purple"
-                android:fontFamily="@font/josefinsans"
+                android:fontFamily="@font/josefinsans_regular"
                 android:layout_marginTop="5dp"
                 android:paddingLeft="20dp"
                 android:paddingRight="20dp"
@@ -220,7 +260,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textColor="@color/purple"
-                android:fontFamily="@font/josefinsans"
+                android:fontFamily="@font/josefinsans_regular"
                 android:layout_marginTop="5dp"
                 android:paddingLeft="20dp"
                 android:paddingRight="20dp"
@@ -235,64 +275,73 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textColor="@color/purple"
-        android:fontFamily="@font/josefinsans"
+        android:fontFamily="@font/josefinsans_bold"
         android:layout_marginTop="25dp"
+        android:layout_marginBottom="10dp"
         android:paddingLeft="20dp"
         android:paddingRight="20dp"
-        android:paddingBottom="20dp"
         android:textSize="20sp"
         android:text="Features"/>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center"
         android:orientation="horizontal"
         android:paddingLeft="20dp"
         android:paddingRight="20dp"
         android:weightSum="3">
-
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:layout_weight="1"
             android:gravity="center_horizontal">
-
             <ImageView
-                android:id="@+id/todo"
+                android:id="@+id/todoList"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
-                android:layout_marginRight="10dp"
-                android:src="@drawable/calendar"
+                android:contentDescription="logoSelected"
+                app:srcCompat="@drawable/calendar"
                 android:background="@drawable/edit_round"
                 android:padding="20dp"
-                android:scaleType="centerInside"/>
-
+                android:scaleType="centerInside"
+                android:onClick="onClickToDOList"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_weight="1"
+            android:gravity="center_horizontal">
             <ImageView
-                android:id="@+id/item"
+                android:id="@+id/itemList"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
-                android:src="@drawable/clipboard"
+                android:contentDescription="logoSelected"
+                app:srcCompat="@drawable/clipboard"
                 android:background="@drawable/edit_round"
                 android:padding="20dp"
-                android:scaleType="centerInside"/>
-
+                android:scaleType="centerInside"
+                android:onClick="onClickItemList"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_weight="1"
+            android:gravity="center_horizontal">
             <ImageView
                 android:id="@+id/files"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
-                android:layout_marginLeft="10dp"
-                android:src="@drawable/blankfile"
+                android:contentDescription="logoSelected"
+                app:srcCompat="@drawable/blankfile"
                 android:background="@drawable/edit_round"
                 android:padding="20dp"
-                android:scaleType="centerInside"/>
+                android:scaleType="centerInside"
+                android:onClick="onClickFiles"/>
         </LinearLayout>
-
     </LinearLayout>
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -310,15 +359,15 @@
             <TextView
                 android:id="@+id/todoListText"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textColor="@color/purple"
-                android:fontFamily="@font/josefinsans"
+                android:layout_height="23dp"
                 android:layout_marginTop="5dp"
+                android:fontFamily="@font/josefinsans_regular"
                 android:paddingLeft="20dp"
                 android:paddingRight="20dp"
-                android:textSize="15sp"
+                android:text="To-do List"
                 android:textAlignment="center"
-                android:text="To-do List"/>
+                android:textColor="@color/purple"
+                android:textSize="15sp" />
         </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
@@ -332,7 +381,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textColor="@color/purple"
-                android:fontFamily="@font/josefinsans"
+                android:fontFamily="@font/josefinsans_regular"
                 android:layout_marginTop="5dp"
                 android:paddingLeft="20dp"
                 android:paddingRight="20dp"
@@ -352,13 +401,13 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textColor="@color/purple"
-                android:fontFamily="@font/josefinsans"
+                android:fontFamily="@font/josefinsans_regular"
                 android:layout_marginTop="5dp"
                 android:paddingLeft="20dp"
                 android:paddingRight="20dp"
                 android:textSize="15sp"
                 android:textAlignment="center"
-                android:text="FIles"/>
+                android:text="Files"/>
         </LinearLayout>
     </LinearLayout>
 

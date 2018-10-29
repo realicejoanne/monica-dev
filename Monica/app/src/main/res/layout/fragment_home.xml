@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
@@ -8,163 +9,180 @@
     <include layout="@layout/toolbar_main"
         android:id="@+id/toolbar" />
 
-    <TextView
-        android:id="@+id/fg_home"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/toolbar"
-        android:layout_alignParentStart="true"
-        android:layout_marginStart="33dp"
-        android:layout_marginTop="32dp"
-        android:fontFamily="@font/josefinsans"
-        android:text="Ongoing Committees"
-        android:textColor="@color/purple"
-        android:textSize="20sp" />
-
-    <LinearLayout
-        android:id="@+id/cm_cbs"
-        android:layout_below="@id/fg_home"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingTop="25dp"
-        android:paddingLeft="33dp"
-        android:paddingBottom="10dp">
-
-        <ImageButton
-            android:id="@+id/home_to_committee"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:background="@drawable/homeeclipse" />
+        android:layout_height="match_parent">
 
         <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:orientation="vertical">
 
             <TextView
+                android:id="@+id/fg_home"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="@color/clear"
-                android:layout_marginLeft="15dp"
-                android:text="CBS 2018"
-                android:fontFamily="@font/josefinsans_bold"
+                android:layout_below="@+id/toolbar"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="33dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/josefinsans_regular"
+                android:text="Ongoing Committees"
                 android:textColor="@color/purple"
-                android:textSize="28sp" />
+                android:textSize="20sp" />
+
+            <LinearLayout
+                android:id="@+id/cm_cbs"
+                android:layout_below="@id/fg_home"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:layout_marginStart="33dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="10dp">
+
+                <ImageButton
+                    android:id="@+id/cbs_btn"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:background="@drawable/homeeclipse" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@color/clear"
+                        android:layout_marginLeft="15dp"
+                        android:text="CBS 2018"
+                        android:fontFamily="@font/josefinsans_bold"
+                        android:textColor="@color/purple"
+                        android:textSize="28sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@color/clear"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginLeft="15dp"
+                        android:text="Ospek jurusan di TI Unpad 2018"
+                        android:textColor="@color/purple"
+                        android:textSize="17sp"
+                        android:fontFamily="@font/josefinsans_regular" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/cm_ifest"
+                android:layout_below="@id/cm_cbs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:layout_marginStart="33dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="10dp">
+
+                <ImageButton
+                    android:id="@+id/ifest_btn"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:background="@drawable/homeifest" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@color/clear"
+                        android:layout_marginLeft="15dp"
+                        android:text="IFEST 2018"
+                        android:fontFamily="@font/josefinsans_bold"
+                        android:textColor="@color/purple"
+                        android:textSize="28sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@color/clear"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginLeft="15dp"
+                        android:text="Technovate the Future"
+                        android:textColor="@color/purple"
+                        android:textSize="17sp"
+                        android:fontFamily="@font/josefinsans_regular" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/cm_create"
+                android:layout_below="@id/cm_ifest"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginStart="33dp"
+                android:layout_marginBottom="10dp">
+
+                <ImageButton
+                    android:id="@+id/cm_create_btn"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:background="@drawable/homecreate" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@color/clear"
+                        android:layout_marginLeft="15dp"
+                        android:text="Create new..."
+                        android:fontFamily="@font/josefinsans_bold"
+                        android:textColor="@color/purple"
+                        android:textSize="28sp" />
+                </LinearLayout>
+
+            </LinearLayout>
 
             <TextView
+                android:id="@+id/agenda"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="@color/clear"
-                android:layout_marginTop="10dp"
-                android:layout_marginLeft="15dp"
-                android:text="Ospek jurusan di TI Unpad 2018"
+                android:layout_below="@+id/cm_create"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="33dp"
+                android:layout_marginTop="32dp"
+                android:fontFamily="@font/josefinsans_regular"
+                android:text="Agenda"
                 android:textColor="@color/purple"
-                android:textSize="17sp"
-                android:fontFamily="@font/josefinsans" />
+                android:textSize="20sp" />
+
+            <CalendarView
+                android:id="@+id/calendarHome"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/agenda"
+                android:layout_marginLeft="33dp"
+                android:layout_marginRight="33dp"
+                android:minDate="01/01/2018"
+                android:theme="@style/CalendarViewCustom" />
         </LinearLayout>
+    </ScrollView>
 
-    </LinearLayout>
 
-    <LinearLayout
-        android:id="@+id/cm_ifest"
-        android:layout_below="@id/cm_cbs"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingTop="25dp"
-        android:paddingLeft="33dp"
-        android:paddingBottom="10dp">
 
-        <ImageButton
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:background="@drawable/homeifest" />
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:orientation="vertical">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@color/clear"
-                android:layout_marginLeft="15dp"
-                android:text="IFEST 2018"
-                android:fontFamily="@font/josefinsans_bold"
-                android:textColor="@color/purple"
-                android:textSize="28sp" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@color/clear"
-                android:layout_marginTop="10dp"
-                android:layout_marginLeft="15dp"
-                android:text="Technovate the Future"
-                android:textColor="@color/purple"
-                android:textSize="17sp"
-                android:fontFamily="@font/josefinsans" />
-        </LinearLayout>
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/cm_create"
-        android:layout_below="@id/cm_ifest"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingTop="25dp"
-        android:paddingLeft="33dp"
-        android:paddingBottom="10dp">
-
-        <ImageButton
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:background="@drawable/homecreate" />
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:orientation="vertical">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@color/clear"
-                android:layout_marginLeft="15dp"
-                android:text="Create new..."
-                android:fontFamily="@font/josefinsans_bold"
-                android:textColor="@color/purple"
-                android:textSize="28sp" />
-        </LinearLayout>
-
-    </LinearLayout>
-
-    <TextView
-        android:id="@+id/agenda"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/cm_create"
-        android:layout_alignParentStart="true"
-        android:layout_marginStart="33dp"
-        android:layout_marginTop="32dp"
-        android:fontFamily="@font/josefinsans"
-        android:text="Agenda"
-        android:textColor="@color/purple"
-        android:textSize="20sp" />
-
-    <CalendarView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_below="@+id/agenda"
-        android:layout_marginLeft="33dp"
-        android:layout_marginRight="33dp"
-        android:minDate="01/01/2018"
-        android:theme="@style/CalendarViewCustom"
-        android:dateTextAppearance="@style/CalendarViewPurple"
-        android:weekDayTextAppearance="@style/CalendarViewPurple" />
-
-</RelativeLayout>
+</LinearLayout>
