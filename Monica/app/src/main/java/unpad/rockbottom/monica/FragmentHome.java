@@ -25,29 +25,18 @@ import java.util.Calendar;
 import java.util.Date;
 
 public class FragmentHome extends Fragment {
-    private LinearLayout linear_cbs_btn;
-    private ImageButton cbs_btn;
+    private LinearLayout linear_cbs_btn,
+                linear_cm_create;
+    private ImageButton cbs_btn,
+                cm_create,
+                ifest_btn;
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_home, container, false);
 
-        cbs_btn = (ImageButton) view.findViewById(R.id.cbs_btn);
-        cbs_btn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                try {
-                    Intent i = new Intent(getActivity(), CommitteeView.class);
-                    startActivity(i);
-                }
-                catch (Exception e){
-                    e.printStackTrace();
-                    Toast.makeText(getActivity(), e.getMessage(), Toast.LENGTH_SHORT).show();
-                }
-
-            }
-        });
+        // Navigate to CBS Committee
         linear_cbs_btn = (LinearLayout) view.findViewById(R.id.cm_cbs);
         linear_cbs_btn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -63,6 +52,72 @@ public class FragmentHome extends Fragment {
 
             }
         });
+        cbs_btn = (ImageButton) view.findViewById(R.id.cbs_btn);
+        linear_cbs_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                try {
+                    Intent i = new Intent(getActivity(), CommitteeView.class);
+                    startActivity(i);
+                }
+                catch (Exception e){
+                    e.printStackTrace();
+                    Toast.makeText(getActivity(), e.getMessage(), Toast.LENGTH_SHORT).show();
+                }
+
+            }
+        });
+
+        // Navigate to create Committee
+        linear_cm_create = (LinearLayout) view.findViewById(R.id.cm_create);
+        linear_cm_create.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                try {
+                    Intent i = new Intent(getActivity(), CreateCommittee.class);
+                    startActivity(i);
+                }
+                catch (Exception e){
+                    e.printStackTrace();
+                    Toast.makeText(getActivity(), e.getMessage(), Toast.LENGTH_SHORT).show();
+                }
+
+            }
+        });
+        cm_create = (ImageButton) view.findViewById(R.id.cm_create_btn);
+        cm_create.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                try {
+                    Intent i = new Intent(getActivity(), CreateCommittee.class);
+                    startActivity(i);
+                }
+                catch (Exception e){
+                    e.printStackTrace();
+                    Toast.makeText(getActivity(), e.getMessage(), Toast.LENGTH_SHORT).show();
+                }
+
+            }
+        });
+
+        // Navigate to Test Screen
+        ifest_btn = (ImageButton) view.findViewById(R.id.ifest_btn);
+        ifest_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                try {
+                    Intent i = new Intent(getActivity(), DeleteLater.class);
+                    startActivity(i);
+                }
+                catch (Exception e){
+                    e.printStackTrace();
+                    Toast.makeText(getActivity(), e.getMessage(), Toast.LENGTH_SHORT).show();
+                }
+
+            }
+        });
+
+
         return view;
     }
 }

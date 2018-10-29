@@ -18,6 +18,12 @@ import android.widget.Toast;
 import com.github.ybq.android.spinkit.style.ThreeBounce;
 
 public class CommitteeView extends AppCompatActivity {
+
+    AlertDialog.Builder dialog;
+    LayoutInflater inflater;
+    View dialogView;
+    ProgressBar progressBar;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -119,7 +125,6 @@ public class CommitteeView extends AppCompatActivity {
                 handler.postDelayed(new Runnable() {
                     @Override
                     public void run() {
-                        //startActivity(new Intent(getApplicationContext(), MainActivity.class));
                         onStop();
                         finish();
                     }
@@ -146,10 +151,7 @@ public class CommitteeView extends AppCompatActivity {
         });
         dialog.show();
     }
-    AlertDialog.Builder dialog;
-    LayoutInflater inflater;
-    View dialogView;
-    ProgressBar progressBar;
+
     private void loadingDialog(){
         dialog = new AlertDialog.Builder(CommitteeView.this);
         inflater = getLayoutInflater();
