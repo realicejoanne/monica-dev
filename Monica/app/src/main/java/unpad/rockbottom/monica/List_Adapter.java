@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.graphics.Paint;
 import android.support.annotation.NonNull;
 import android.support.v4.content.ContextCompat;
+import android.support.v4.content.res.ResourcesCompat;
 import android.support.v7.widget.AppCompatCheckBox;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -25,8 +26,8 @@ import java.util.List;
 public class List_Adapter extends ArrayAdapter<List_Class> {
     private Activity context;
     private List<List_Class> taskList;
-    CheckBox isiPesan;
-    List_Class pesan;
+    private CheckBox isiPesan;
+    private List_Class pesan;
 
     TextView divisi;
 
@@ -66,6 +67,7 @@ public class List_Adapter extends ArrayAdapter<List_Class> {
                 }
             }
         });
+        isiPesan.setTypeface(ResourcesCompat.getFont(getContext(), R.font.josefinsans_regular));
 
         // if it is a header
         if (pesan.getId().equals("0XX0")){

@@ -29,12 +29,12 @@
         <EditText
             android:layout_gravity="center_vertical"
             android:hint="Search..."
+            android:textColorHint="@color/gray"
             android:textSize="20sp"
-            android:lines="1"
             android:maxLines="1"
             android:background="@null"
             android:singleLine="true"
-            android:fontFamily="@font/josefinsans_bold"
+            android:fontFamily="@font/josefinsans_regular"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
     </LinearLayout>
@@ -42,8 +42,6 @@
     <GridView
         android:id="@+id/grid_files"
         android:layout_marginTop="30dp"
-        android:paddingStart="20dp"
-        android:paddingEnd="20dp"
         android:numColumns="3"
         android:verticalSpacing="10dp"
         android:layout_below="@id/search_file"

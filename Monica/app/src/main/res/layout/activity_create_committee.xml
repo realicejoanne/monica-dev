@@ -73,6 +73,7 @@
                     android:maxLength="20"
                     app:backgroundTint = "@color/purple"
                     android:textColorHint="@color/purple"
+                    android:textColor="@color/purple"
                     android:id="@+id/committee_name"
                     android:fontFamily="@font/josefinsans_italic"
                     android:hint="Committee name           (0/20)"
@@ -87,29 +88,36 @@
                     app:backgroundTint = "@color/purple"
                     android:id="@+id/committee_description"
                     android:textColorHint="@color/purple"
+                    android:textColor="@color/purple"
                     android:fontFamily="@font/josefinsans_italic"
                     android:hint="Description                  (0/50)"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" />
             </RelativeLayout>
             <CheckBox
+                android:id="@+id/cbox_1"
                 android:layout_marginLeft="16dp"
                 android:textColor="@color/purple"
-                android:fontFamily="@font/josefinsans_bold"
+                android:buttonTint="@color/purple"
+                android:fontFamily="@font/josefinsans_regular"
                 android:text="Add project supervisor"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
             <CheckBox
+                android:id="@+id/cbox_2"
                 android:layout_marginLeft="16dp"
                 android:textColor="@color/purple"
-                android:fontFamily="@font/josefinsans_bold"
+                android:buttonTint="@color/purple"
+                android:fontFamily="@font/josefinsans_regular"
                 android:text="Add steering committee"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
             <CheckBox
+                android:id="@+id/cbox_3"
                 android:layout_marginLeft="16dp"
                 android:textColor="@color/purple"
-                android:fontFamily="@font/josefinsans_bold"
+                android:buttonTint="@color/purple"
+                android:fontFamily="@font/josefinsans_regular"
                 android:text="Use division sector"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
@@ -125,11 +133,13 @@
                 android:id="@+id/add_division"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
+
                 <Button
                     android:id="@+id/add_division_icon"
-                    android:src="@drawable/addchat"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp" />
+                    android:background="@drawable/addchat"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp" />
                 <EditText
                     android:maxLength="20"
                     android:maxLines="1"
