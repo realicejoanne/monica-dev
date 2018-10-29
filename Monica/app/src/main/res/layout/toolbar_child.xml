@@ -15,6 +15,7 @@
         android:weightSum="5">
 
         <ImageButton
+            android:id="@+id/back"
             android:layout_width="100px"
             android:layout_height="match_parent"
             android:src="@drawable/back"
@@ -23,7 +24,7 @@
             android:layout_weight="1"/>
 
         <TextView
-            android:id="@+id/title"
+            android:id="@+id/titleToolbar"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:textColor="@color/purple"

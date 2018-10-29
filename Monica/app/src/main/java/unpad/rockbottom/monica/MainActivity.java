@@ -20,6 +20,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
         sDrawerLayout = (DrawerLayout) findViewById(R.id.drawer);
         sToogle = new ActionBarDrawerToggle(this,sDrawerLayout,R.string.open,R.string.close);
         sDrawerLayout.addDrawerListener(sToogle);

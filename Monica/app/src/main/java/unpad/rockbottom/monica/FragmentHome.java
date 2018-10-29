@@ -53,7 +53,7 @@ public class FragmentHome extends Fragment {
             }
         });
         cbs_btn = (ImageButton) view.findViewById(R.id.cbs_btn);
-        linear_cbs_btn.setOnClickListener(new View.OnClickListener() {
+        cbs_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 try {
@@ -100,22 +100,6 @@ public class FragmentHome extends Fragment {
             }
         });
 
-        // Navigate to Test Screen
-        ifest_btn = (ImageButton) view.findViewById(R.id.ifest_btn);
-        ifest_btn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                try {
-                    Intent i = new Intent(getActivity(), DeleteLater.class);
-                    startActivity(i);
-                }
-                catch (Exception e){
-                    e.printStackTrace();
-                    Toast.makeText(getActivity(), e.getMessage(), Toast.LENGTH_SHORT).show();
-                }
-
-            }
-        });
 
 
         return view;

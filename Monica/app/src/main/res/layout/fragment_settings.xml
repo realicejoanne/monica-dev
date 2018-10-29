@@ -8,106 +8,119 @@
     <include layout="@layout/toolbar_main"
         android:id="@+id/toolbar"/>
 
-    <ImageView
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
-        android:background="@drawable/separator_line_blue"/>
+        android:layout_height="match_parent">
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Accounts"
-        android:paddingTop="15dp"
-        android:paddingBottom="15dp"
-        android:paddingLeft="50dp"
-        android:fontFamily="@font/josefinsans_bold"
-        android:textColor="@color/purple"
-        android:textSize="20sp"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/separator_line_blue"/>
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/separator_line_blue"/>
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Privacy and Security"
-        android:paddingTop="15dp"
-        android:paddingBottom="15dp"
-        android:paddingLeft="50dp"
-        android:fontFamily="@font/josefinsans_bold"
-        android:textColor="@color/purple"
-        android:textSize="20sp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Accounts"
+                android:paddingTop="15dp"
+                android:paddingBottom="15dp"
+                android:paddingLeft="50dp"
+                android:fontFamily="@font/josefinsans_bold"
+                android:textColor="@color/purple"
+                android:textSize="20sp"/>
 
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/separator_line_blue"/>
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/separator_line_blue"/>
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Notifications and Sounds"
-        android:paddingTop="15dp"
-        android:paddingBottom="15dp"
-        android:paddingLeft="50dp"
-        android:fontFamily="@font/josefinsans_bold"
-        android:textColor="@color/purple"
-        android:textSize="20sp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Privacy and Security"
+                android:paddingTop="15dp"
+                android:paddingBottom="15dp"
+                android:paddingLeft="50dp"
+                android:fontFamily="@font/josefinsans_bold"
+                android:textColor="@color/purple"
+                android:textSize="20sp"/>
 
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/separator_line_blue"/>
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/separator_line_blue"/>
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Media Storage"
-        android:paddingTop="15dp"
-        android:paddingBottom="15dp"
-        android:paddingLeft="50dp"
-        android:fontFamily="@font/josefinsans_bold"
-        android:textColor="@color/purple"
-        android:textSize="20sp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Notifications and Sounds"
+                android:paddingTop="15dp"
+                android:paddingBottom="15dp"
+                android:paddingLeft="50dp"
+                android:fontFamily="@font/josefinsans_bold"
+                android:textColor="@color/purple"
+                android:textSize="20sp"/>
 
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/separator_line_blue"/>
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/separator_line_blue"/>
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Language"
-        android:paddingTop="15dp"
-        android:paddingBottom="15dp"
-        android:paddingLeft="50dp"
-        android:fontFamily="@font/josefinsans_bold"
-        android:textColor="@color/purple"
-        android:textSize="20sp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Media Storage"
+                android:paddingTop="15dp"
+                android:paddingBottom="15dp"
+                android:paddingLeft="50dp"
+                android:fontFamily="@font/josefinsans_bold"
+                android:textColor="@color/purple"
+                android:textSize="20sp"/>
 
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/separator_line_blue"/>
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/separator_line_blue"/>
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="About"
-        android:paddingTop="15dp"
-        android:paddingBottom="15dp"
-        android:paddingLeft="50dp"
-        android:fontFamily="@font/josefinsans_bold"
-        android:textColor="@color/purple"
-        android:textSize="20sp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Language"
+                android:paddingTop="15dp"
+                android:paddingBottom="15dp"
+                android:paddingLeft="50dp"
+                android:fontFamily="@font/josefinsans_bold"
+                android:textColor="@color/purple"
+                android:textSize="20sp"/>
 
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/separator_line_blue"/>
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/separator_line_blue"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="About"
+                android:paddingTop="15dp"
+                android:paddingBottom="15dp"
+                android:paddingLeft="50dp"
+                android:fontFamily="@font/josefinsans_bold"
+                android:textColor="@color/purple"
+                android:textSize="20sp"/>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/separator_line_blue"/>
+        </LinearLayout>
+    </ScrollView>
+
+
 
 </LinearLayout>
