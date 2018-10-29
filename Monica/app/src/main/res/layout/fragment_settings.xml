@@ -8,12 +8,11 @@
     <include layout="@layout/toolbar_main"
         android:id="@+id/toolbar"/>
 
-    <View
-        android:layout_below="@+id/toolbar"
+    <ImageView
         android:layout_width="match_parent"
-        android:layout_height="3dp"
-        android:layout_marginTop="35dp"
-        android:background="@color/blue"/>
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/separator_line_blue"/>
 
     <TextView
         android:layout_width="match_parent"
@@ -21,16 +20,15 @@
         android:text="Accounts"
         android:paddingTop="15dp"
         android:paddingBottom="15dp"
-        android:paddingLeft="55dp"
+        android:paddingLeft="50dp"
         android:fontFamily="@font/josefinsans_bold"
         android:textColor="@color/purple"
         android:textSize="20sp"/>
 
-    <View
-        android:layout_below="@+id/toolbar"
+    <ImageView
         android:layout_width="match_parent"
-        android:layout_height="3dp"
-        android:background="@color/blue"/>
+        android:layout_height="wrap_content"
+        android:background="@drawable/separator_line_blue"/>
 
     <TextView
         android:layout_width="match_parent"
@@ -38,16 +36,15 @@
         android:text="Privacy and Security"
         android:paddingTop="15dp"
         android:paddingBottom="15dp"
-        android:paddingLeft="55dp"
+        android:paddingLeft="50dp"
         android:fontFamily="@font/josefinsans_bold"
         android:textColor="@color/purple"
         android:textSize="20sp"/>
 
-    <View
-        android:layout_below="@+id/toolbar"
+    <ImageView
         android:layout_width="match_parent"
-        android:layout_height="3dp"
-        android:background="@color/blue"/>
+        android:layout_height="wrap_content"
+        android:background="@drawable/separator_line_blue"/>
 
     <TextView
         android:layout_width="match_parent"
@@ -55,16 +52,15 @@
         android:text="Notifications and Sounds"
         android:paddingTop="15dp"
         android:paddingBottom="15dp"
-        android:paddingLeft="55dp"
+        android:paddingLeft="50dp"
         android:fontFamily="@font/josefinsans_bold"
         android:textColor="@color/purple"
         android:textSize="20sp"/>
 
-    <View
-        android:layout_below="@+id/toolbar"
+    <ImageView
         android:layout_width="match_parent"
-        android:layout_height="3dp"
-        android:background="@color/blue"/>
+        android:layout_height="wrap_content"
+        android:background="@drawable/separator_line_blue"/>
 
     <TextView
         android:layout_width="match_parent"
@@ -72,16 +68,15 @@
         android:text="Media Storage"
         android:paddingTop="15dp"
         android:paddingBottom="15dp"
-        android:paddingLeft="55dp"
+        android:paddingLeft="50dp"
         android:fontFamily="@font/josefinsans_bold"
         android:textColor="@color/purple"
         android:textSize="20sp"/>
 
-    <View
-        android:layout_below="@+id/toolbar"
+    <ImageView
         android:layout_width="match_parent"
-        android:layout_height="3dp"
-        android:background="@color/blue"/>
+        android:layout_height="wrap_content"
+        android:background="@drawable/separator_line_blue"/>
 
     <TextView
         android:layout_width="match_parent"
@@ -89,16 +84,15 @@
         android:text="Language"
         android:paddingTop="15dp"
         android:paddingBottom="15dp"
-        android:paddingLeft="55dp"
+        android:paddingLeft="50dp"
         android:fontFamily="@font/josefinsans_bold"
         android:textColor="@color/purple"
         android:textSize="20sp"/>
 
-    <View
-        android:layout_below="@+id/toolbar"
+    <ImageView
         android:layout_width="match_parent"
-        android:layout_height="3dp"
-        android:background="@color/blue"/>
+        android:layout_height="wrap_content"
+        android:background="@drawable/separator_line_blue"/>
 
     <TextView
         android:layout_width="match_parent"
@@ -106,15 +100,14 @@
         android:text="About"
         android:paddingTop="15dp"
         android:paddingBottom="15dp"
-        android:paddingLeft="55dp"
+        android:paddingLeft="50dp"
         android:fontFamily="@font/josefinsans_bold"
         android:textColor="@color/purple"
         android:textSize="20sp"/>
 
-    <View
-        android:layout_below="@+id/toolbar"
+    <ImageView
         android:layout_width="match_parent"
-        android:layout_height="3dp"
-        android:background="@color/blue"/>
+        android:layout_height="wrap_content"
+        android:background="@drawable/separator_line_blue"/>
 
 </LinearLayout>

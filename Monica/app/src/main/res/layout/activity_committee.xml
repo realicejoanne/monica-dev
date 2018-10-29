@@ -123,6 +123,7 @@
                     android:padding="6dp"
                     android:maxLines="1"
                     android:textSize="12sp"
+                    android:onClick="onClickFinish"
                     android:text="WE FINISH IT!" />
             </LinearLayout>
         </LinearLayout>

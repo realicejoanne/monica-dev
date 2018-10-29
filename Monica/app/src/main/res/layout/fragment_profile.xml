@@ -50,9 +50,8 @@
                 android:paddingBottom="5dp"
                 android:maxLines="1"
                 android:textSize="14sp"
-                android:text="@patriciajoanne"
-                android:layout_weight="1"
-                tools:ignore="HardcodedText" />
+                android:text="ID: @patriciajoanne"
+                android:layout_weight="1" />
 
             <LinearLayout
                 android:layout_width="match_parent"

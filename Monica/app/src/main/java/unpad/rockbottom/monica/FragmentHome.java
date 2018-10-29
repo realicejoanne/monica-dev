@@ -15,6 +15,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CalendarView;
+import android.widget.ImageButton;
 import android.widget.Toast;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
@@ -62,8 +63,6 @@ public class FragmentHome extends Fragment {
 
             }
         });
-
         return view;
     }
 }
-

@@ -8,6 +8,11 @@
         <item name="colorAccent">@color/colorAccent</item>
         <item name="android:colorForeground">@color/colorPrimaryDark</item>
         <item name="android:colorBackground">@color/gray</item>
+        <item name="android:textViewStyle">@style/JosefinSansText</item>
+    </style>
+
+    <style name="JosefinSansText" parent="android:Widget.TextView">
+        <item name="android:fontFamily">@font/josefinsans</item>
     </style>
 
     <style name="CalendarViewCustom" parent="Theme.AppCompat">
@@ -24,5 +29,11 @@
     <style name="CalendarViewPink" parent="android:TextAppearance.DeviceDefault.Small">
         <item name="android:textColor">@color/colorAccent</item>
     </style>
-
+    <style name="AlertDialogCustom" parent="@android:style/Theme.Dialog">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:headerDividersEnabled">true</item>
+        <item name="android:typeface">normal</item>
+        <item name="android:background">@color/colorPrimary</item>
+    </style>
 </resources>

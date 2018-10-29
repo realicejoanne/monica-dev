@@ -26,11 +26,11 @@ public class Splash extends AppCompatActivity {
 
         final Handler handler = new Handler();
         handler.postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                startActivity(new Intent(getApplicationContext(), Auth.class));
-                finish();
-            }
-        }, 3000L); //3000 L = 3 detik
-    }
+        @Override
+        public void run() {
+            startActivity(new Intent(getApplicationContext(), Auth.class));
+            finish();
+        }
+    }, 3000L); //3000 L = 3 detik
+}
 }
