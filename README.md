@@ -6,7 +6,7 @@ Developers:
 - Patricia Joanne (Full Stack, Project Leader)
 - Muhammad Rifqy Aulia Akbar (Front End)
 - Muhammad Raihan Akbar (Full Stack)
-- Adryan Luthfi Faiz (Front End)
+- Adryan Luthfi Faiz (Design)
 - Mochamad Fa'izin Ahsan (Full Stack)
 
 Supervisor:
@@ -26,12 +26,15 @@ Mira Suryani, S.Pd., M.Kom.
 
 **v2.x (Oct 14th-19th, 2018)**
 - [ ] Fit all layouts with percents
-- [ ] Item list
-- [ ] To do list
-- [ ] Folder
-- [ ] Chat
-- [ ] Voice call
-- [ ] Video call
-- [ ] Multichat
+- [x] Item list
+- [x] To do list
+- [x] Files
+- [x] Chat
+- [x] Voice call
+- [x] Video call
+- [x] Channel
 
-**soon...**
+**v3.x (Oct 20th-29th, 2018)**
+- [x] FINISH EVERYTHING
+
+**v4.x (soon)**
