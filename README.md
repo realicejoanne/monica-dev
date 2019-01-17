@@ -14,7 +14,7 @@ Mira Suryani, S.Pd., M.Kom.
 
 ### Progress
 
-**v1.x (Oct 8th-13th, 2018)**
+*v1.x (Oct 8th-13th, 2018)*
 - [x] Login with E-mail
 - [x] Splash
 - [x] Home
@@ -24,7 +24,7 @@ Mira Suryani, S.Pd., M.Kom.
 - [x] Profile
 - [x] Settings
 
-**v2.x (Oct 14th-19th, 2018)**
+*v2.x (Oct 14th-19th, 2018)*
 - [ ] Fit all layouts with percents
 - [x] Item list
 - [x] To do list
@@ -34,7 +34,7 @@ Mira Suryani, S.Pd., M.Kom.
 - [x] Video call
 - [x] Channel
 
-**v3.x (Oct 20th-29th, 2018)**
+*v3.x (Oct 20th-29th, 2018)*
 - [x] FINISH EVERYTHING
 
-**v4.x (soon)**
+*v4.x (TBC)*
